@@ -13,6 +13,20 @@ uses
 type
   TDataModule1 = class(TDataModule)
     FDConnection1: TFDConnection;
+    dsCracha: TDataSource;
+    qryCracha: TFDQuery;
+    qryCrachaID: TIntegerField;
+    qryCrachaNR_ANILHA: TStringField;
+    qryCrachaNOME_AVE: TStringField;
+    qryCrachaPROPRIETARIO: TStringField;
+    qryCrachaPAI: TStringField;
+    qryCrachaMAE: TStringField;
+    qryCrachaANILHA_PAI: TStringField;
+    qryCrachaANILHA_MAE: TStringField;
+    qryCrachaREGISTRO_CTF: TStringField;
+    qryCrachaDATA_NASCIMENTO: TDateField;
+    qryCrachaSEXO: TStringField;
+    updSQL: TFDUpdateSQL;
   private
     { Private declarations }
   public

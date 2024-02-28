@@ -8,10 +8,13 @@
     <Transaction>2024/02/27 14:35:17.000.077,C:\Users\Junior\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Cracha\Cracha.dproj</Transaction>
     <Transaction>2024/02/27 14:35:37.000.226,=C:\Cracha\Unit1.pas</Transaction>
     <Transaction>2024/02/27 14:35:52.000.936,=C:\Cracha\Unit2.pas</Transaction>
-    <Transaction>2024/02/27 15:26:01.000.306,C:\Cracha\Unit2.pas=C:\Cracha\uCracha.pas</Transaction>
     <Transaction>2024/02/27 15:26:01.000.306,C:\Cracha\Unit2.dfm=C:\Cracha\uCracha.dfm</Transaction>
+    <Transaction>2024/02/27 15:26:01.000.306,C:\Cracha\Unit2.pas=C:\Cracha\uCracha.pas</Transaction>
     <Transaction>2024/02/27 15:33:43.000.323,=C:\Cracha\Unit1.pas</Transaction>
-    <Transaction>2024/02/27 15:38:51.000.102,C:\Cracha\Unit1.pas=C:\Cracha\udmCracha.pas</Transaction>
     <Transaction>2024/02/27 15:38:51.000.102,C:\Cracha\Unit1.dfm=C:\Cracha\udmCracha.dfm</Transaction>
+    <Transaction>2024/02/27 15:38:51.000.102,C:\Cracha\Unit1.pas=C:\Cracha\udmCracha.pas</Transaction>
+    <Transaction>2024/02/28 16:33:39.697,=C:\Cracha2\Unit2.pas</Transaction>
+    <Transaction>2024/02/28 16:41:27.268,C:\Cracha2\uCracha_2.dfm=C:\Cracha2\Unit2.dfm</Transaction>
+    <Transaction>2024/02/28 16:41:27.268,C:\Cracha2\uCracha_2.pas=C:\Cracha2\Unit2.pas</Transaction>
   </Transactions>
 </BorlandProject>
