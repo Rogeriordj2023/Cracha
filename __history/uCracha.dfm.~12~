@@ -1,7 +1,7 @@
 object frmCracha: TfrmCracha
   Left = 0
   Top = 0
-  BorderIcons = [biSystemMenu]
+  BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Rela'#231#227'o de Aves'
   ClientHeight = 547
   ClientWidth = 853
@@ -67,7 +67,7 @@ object frmCracha: TfrmCracha
             Font.Name = 'Segoe UI'
             Font.Style = []
             Title.Caption = 'Nome da Ave'
-            Title.Color = clWhite
+            Title.Color = clAqua
             Width = 189
             Visible = True
           end

@@ -1,7 +1,7 @@
 object frmCracha: TfrmCracha
   Left = 0
   Top = 0
-  BorderIcons = [biSystemMenu]
+  BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Rela'#231#227'o de Aves'
   ClientHeight = 547
   ClientWidth = 853
@@ -44,7 +44,6 @@ object frmCracha: TfrmCracha
         Height = 483
         Align = alTop
         DataSource = DataModule1.dsCracha
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ReadOnly = True
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
@@ -67,7 +66,6 @@ object frmCracha: TfrmCracha
             Font.Name = 'Segoe UI'
             Font.Style = []
             Title.Caption = 'Nome da Ave'
-            Title.Color = clWhite
             Width = 189
             Visible = True
           end
