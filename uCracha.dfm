@@ -2,7 +2,7 @@ object frmCracha: TfrmCracha
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu, biMaximize]
-  Caption = 'Crach'#225
+  Caption = 'Rela'#231#227'o de Aves'
   ClientHeight = 547
   ClientWidth = 853
   Color = clBtnFace
@@ -35,8 +35,6 @@ object frmCracha: TfrmCracha
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 850
-    ExplicitHeight = 546
     object TabSheet1: TTabSheet
       Caption = 'Crach'#225
       object DBGrid1: TDBGrid
@@ -45,6 +43,7 @@ object frmCracha: TfrmCracha
         Width = 845
         Height = 483
         Align = alTop
+        DataSource = DataModule1.dsCracha
         ReadOnly = True
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
@@ -204,131 +203,6 @@ object frmCracha: TfrmCracha
         ParentFont = False
         TabOrder = 5
         OnClick = Button1Click
-      end
-      object Button6: TButton
-        Left = 630
-        Top = 489
-        Width = 75
-        Height = 25
-        Caption = 'Cancelar'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Courier New'
-        Font.Style = [fsBold, fsItalic]
-        ParentFont = False
-        TabOrder = 6
-        OnClick = Button1Click
-      end
-      object Button4: TButton
-        Left = 726
-        Top = 489
-        Width = 75
-        Height = 25
-        Caption = 'Gravar'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Courier New'
-        Font.Style = [fsBold, fsItalic]
-        ParentFont = False
-        TabOrder = 7
-        OnClick = Button4Click
-      end
-    end
-    object TabSheet2: TTabSheet
-      Caption = 'Gen'#233'tica'
-      ImageIndex = 1
-      object DBText11: TDBText
-        Left = 95
-        Top = 56
-        Width = 65
-        Height = 17
-      end
-      object Label11: TLabel
-        Left = 225
-        Top = 19
-        Width = 16
-        Height = 15
-        Caption = 'Pai'
-      end
-      object DBText12: TDBText
-        Left = 311
-        Top = 56
-        Width = 65
-        Height = 17
-      end
-      object DBText13: TDBText
-        Left = 24
-        Top = 96
-        Width = 65
-        Height = 17
-      end
-      object DBText14: TDBText
-        Left = 152
-        Top = 96
-        Width = 65
-        Height = 17
-      end
-      object DBText15: TDBText
-        Left = 289
-        Top = 96
-        Width = 65
-        Height = 17
-      end
-      object DBText16: TDBText
-        Left = 408
-        Top = 96
-        Width = 65
-        Height = 17
-      end
-      object DBText17: TDBText
-        Left = 3
-        Top = 152
-        Width = 65
-        Height = 17
-      end
-      object DBText18: TDBText
-        Left = 63
-        Top = 152
-        Width = 65
-        Height = 17
-      end
-      object DBText19: TDBText
-        Left = 127
-        Top = 152
-        Width = 65
-        Height = 17
-      end
-      object DBText20: TDBText
-        Left = 189
-        Top = 152
-        Width = 65
-        Height = 17
-      end
-      object DBText23: TDBText
-        Left = 260
-        Top = 152
-        Width = 65
-        Height = 17
-      end
-      object DBText24: TDBText
-        Left = 319
-        Top = 152
-        Width = 65
-        Height = 17
-      end
-      object DBText25: TDBText
-        Left = 385
-        Top = 152
-        Width = 65
-        Height = 17
-      end
-      object DBText26: TDBText
-        Left = 447
-        Top = 152
-        Width = 65
-        Height = 17
       end
     end
   end

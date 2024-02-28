@@ -1,7 +1,7 @@
 object Form2: TForm2
   Left = 0
   Top = 0
-  Caption = 'Form2'
+  Caption = 'Cadastro de Crach'#225
   ClientHeight = 344
   ClientWidth = 720
   Color = clBtnFace
@@ -11527,5 +11527,33 @@ object Form2: TForm2
       B3C9493972C925975C3EF992637D2EB9E492CB275F72ACCF25975C72F9E44B8E
       F5B9E4924B2E9F7CF97F8A64C8C6F129841C0000000049454E44AE426082}
     Proportional = True
+  end
+  object Button6: TButton
+    Left = 541
+    Top = 311
+    Width = 75
+    Height = 25
+    Caption = 'Cancelar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Button4: TButton
+    Left = 636
+    Top = 311
+    Width = 75
+    Height = 25
+    Caption = 'Gravar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 1
   end
 end

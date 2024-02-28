@@ -15,32 +15,14 @@ type
   TfrmCracha = class(TForm)
     pcCadastro: TPageControl;
     TabSheet1: TTabSheet;
-    TabSheet2: TTabSheet;
     DBGrid1: TDBGrid;
-    DBText11: TDBText;
-    Label11: TLabel;
-    DBText12: TDBText;
-    DBText13: TDBText;
-    DBText14: TDBText;
-    DBText15: TDBText;
-    DBText16: TDBText;
-    DBText17: TDBText;
-    DBText18: TDBText;
-    DBText19: TDBText;
-    DBText20: TDBText;
     DBText21: TDBText;
     DBText22: TDBText;
-    DBText23: TDBText;
-    DBText24: TDBText;
-    DBText25: TDBText;
-    DBText26: TDBText;
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
     Button5: TButton;
     Button7: TButton;
-    Button6: TButton;
-    Button4: TButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -76,7 +58,7 @@ end;
 procedure TfrmCracha.FormShow(Sender: TObject);
 begin
   pcCadastro.ActivePageIndex := 0;
-  //FDQuery1.Open;
+  udmCracha.DataModule1.qryCracha.Open;
 end;
 
 end.

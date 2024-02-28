@@ -33,6 +33,8 @@ type
     Label9: TLabel;
     Label10: TLabel;
     Image1: TImage;
+    Button6: TButton;
+    Button4: TButton;
   private
     { Private declarations }
   public
