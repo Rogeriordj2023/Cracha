@@ -23,6 +23,8 @@ object frmCracha: TfrmCracha
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 850
+    ExplicitHeight = 546
     object TabSheet1: TTabSheet
       Caption = 'Crach'#225
       object DBText1: TDBText

@@ -95,6 +95,7 @@ end;
 procedure TfrmCracha.FormShow(Sender: TObject);
 begin
   pcCadastro.ActivePageIndex := 0;
+  FDQuery1.Open;
 end;
 
 end.
