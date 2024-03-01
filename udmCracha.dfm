@@ -13,116 +13,263 @@ object DataModule1: TDataModule1
     Top = 24
   end
   object dsCracha: TDataSource
-    DataSet = qryCracha
-    Left = 560
-    Top = 24
+    DataSet = ClientDataSet1
+    Left = 400
+    Top = 32
   end
-  object qryCracha: TFDQuery
-    Connection = FDConnection1
-    UpdateObject = updSQL
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 328
+    Top = 96
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 232
+    Top = 32
+  end
+  object SQLQuery1: TSQLQuery
+    DataSource = dsCracha
+    MaxBlobSize = -1
+    Params = <>
     SQL.Strings = (
       'SELECT * FROM CADCRACHA')
+    SQLConnection = SQLConnection1
+    Left = 328
+    Top = 32
+  end
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'IBConnection'
+    DriverName = 'Interbase'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXInterBase'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver280.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=24.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXInterbaseMetaDataCommandFactory,DbxInt' +
+        'erBaseDriver280.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXInterbaseMetaDataCommand' +
+        'Factory,Borland.Data.DbxInterBaseDriver,Version=24.0.0.0,Culture' +
+        '=neutral,PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverINTERBASE'
+      'LibraryName=dbxint.dll'
+      'LibraryNameOsx=libsqlib.dylib'
+      'VendorLib=GDS32.DLL'
+      'VendorLibWin64=ibclient64.dll'
+      'VendorLibOsx=libgds.dylib'
+      'Role=RoleName'
+      'MaxBlobSize=-1'
+      'TrimChar=False'
+      'DisplayDriverName=InterBase Server'
+      'SEP='
+      'DriverName=Interbase'
+      'Database=Bco1.fdb'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=master'
+      'ServerCharSet='
+      'SQLDialect=3'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'IsolationLevel=ReadCommitted'
+      'Trim Char=False')
     Left = 560
-    Top = 96
-    object qryCrachaID: TIntegerField
-      AutoGenerateValue = arAutoInc
+    Top = 32
+  end
+  object SQLConnection2: TSQLConnection
+    ConnectionName = 'IBConnection'
+    DriverName = 'Interbase'
+    Params.Strings = (
+      'DriverName=Interbase'
+      'Database=database.gdb'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=3'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'IsolationLevel=ReadCommitted'
+      'Trim Char=False')
+    Left = 560
+    Top = 136
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet2
+    Left = 136
+    Top = 232
+  end
+  object ClientDataSet2: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider2'
+    Left = 224
+    Top = 232
+  end
+  object DataSetProvider2: TDataSetProvider
+    DataSet = ClientDataSet2
+    Left = 320
+    Top = 232
+  end
+  object SQLQuery2: TSQLQuery
+    DataSource = DataSource1
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'SELECT * FROM CADCRACHA')
+    SQLConnection = SQLConnection2
+    Left = 56
+    Top = 232
+  end
+  object IBDatabase1: TIBDatabase
+    Connected = True
+    DatabaseName = 'C:\Cracha2\BCO1.FDB'
+    Params.Strings = (
+      'user_name=sysdba')
+    ServerType = 'IBServer'
+    Left = 80
+    Top = 336
+  end
+  object IBSQL1: TIBSQL
+    Database = IBDatabase1
+    SQL.Strings = (
+      'SELECT * FROM CADCRACHA')
+    Left = 168
+    Top = 336
+  end
+  object IBDataSet1: TIBDataSet
+    Database = IBDatabase1
+    BufferChunks = 1000
+    CachedUpdates = False
+    SelectSQL.Strings = (
+      'SELECT * FROM CADCRACHA')
+    ParamCheck = True
+    UniDirectional = False
+    UpdateObject = IBUpdateSQL1
+    Left = 256
+    Top = 336
+    object IBDataSet1ID: TIntegerField
       FieldName = 'ID'
-      Origin = 'ID'
+      Origin = 'CADCRACHA.ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qryCrachaNR_ANILHA: TStringField
+    object IBDataSet1NR_ANILHA: TIBStringField
       FieldName = 'NR_ANILHA'
-      Origin = 'NR_ANILHA'
+      Origin = 'CADCRACHA.NR_ANILHA'
       Size = 30
     end
-    object qryCrachaNOME_AVE: TStringField
+    object IBDataSet1NOME_AVE: TIBStringField
       FieldName = 'NOME_AVE'
-      Origin = 'NOME_AVE'
+      Origin = 'CADCRACHA.NOME_AVE'
       Size = 80
     end
-    object qryCrachaPROPRIETARIO: TStringField
+    object IBDataSet1PROPRIETARIO: TIBStringField
       FieldName = 'PROPRIETARIO'
-      Origin = 'PROPRIETARIO'
+      Origin = 'CADCRACHA.PROPRIETARIO'
       Size = 100
     end
-    object qryCrachaPAI: TStringField
+    object IBDataSet1PAI: TIBStringField
       FieldName = 'PAI'
-      Origin = 'PAI'
+      Origin = 'CADCRACHA.PAI'
       Size = 50
     end
-    object qryCrachaMAE: TStringField
+    object IBDataSet1MAE: TIBStringField
       FieldName = 'MAE'
-      Origin = 'MAE'
+      Origin = 'CADCRACHA.MAE'
       Size = 50
     end
-    object qryCrachaANILHA_PAI: TStringField
+    object IBDataSet1ANILHA_PAI: TIBStringField
       FieldName = 'ANILHA_PAI'
-      Origin = 'ANILHA_PAI'
+      Origin = 'CADCRACHA.ANILHA_PAI'
       Size = 30
     end
-    object qryCrachaANILHA_MAE: TStringField
+    object IBDataSet1ANILHA_MAE: TIBStringField
       FieldName = 'ANILHA_MAE'
-      Origin = 'ANILHA_MAE'
+      Origin = 'CADCRACHA.ANILHA_MAE'
       Size = 30
     end
-    object qryCrachaREGISTRO_CTF: TStringField
+    object IBDataSet1REGISTRO_CTF: TIBStringField
       FieldName = 'REGISTRO_CTF'
-      Origin = 'REGISTRO_CTF'
+      Origin = 'CADCRACHA.REGISTRO_CTF'
       Size = 15
     end
-    object qryCrachaDATA_NASCIMENTO: TDateField
+    object IBDataSet1DATA_NASCIMENTO: TDateField
       FieldName = 'DATA_NASCIMENTO'
-      Origin = 'DATA_NASCIMENTO'
+      Origin = 'CADCRACHA.DATA_NASCIMENTO'
     end
-    object qryCrachaSEXO: TStringField
+    object IBDataSet1SEXO: TIBStringField
       FieldName = 'SEXO'
-      Origin = 'SEXO'
+      Origin = 'CADCRACHA.SEXO'
       Size = 10
     end
   end
-  object updSQL: TFDUpdateSQL
-    Connection = FDConnection1
-    InsertSQL.Strings = (
-      'INSERT INTO CADCRACHA'
-      '(NR_ANILHA, NOME_AVE, PROPRIETARIO, PAI, '
-      '  MAE, ANILHA_PAI, ANILHA_MAE, REGISTRO_CTF, '
-      '  DATA_NASCIMENTO, SEXO)'
-      
-        'VALUES (:NEW_NR_ANILHA, :NEW_NOME_AVE, :NEW_PROPRIETARIO, :NEW_P' +
-        'AI, '
-      
-        '  :NEW_MAE, :NEW_ANILHA_PAI, :NEW_ANILHA_MAE, :NEW_REGISTRO_CTF,' +
-        ' '
-      '  :NEW_DATA_NASCIMENTO, :NEW_SEXO)'
-      
-        'RETURNING NR_ANILHA, NOME_AVE, PROPRIETARIO, PAI, MAE, ANILHA_PA' +
-        'I, ANILHA_MAE, REGISTRO_CTF, DATA_NASCIMENTO, SEXO')
+  object DataSource2: TDataSource
+    DataSet = IBDataSet1
+    Left = 344
+    Top = 336
+  end
+  object IBUpdateSQL1: TIBUpdateSQL
+    RefreshSQL.Strings = (
+      'Select '
+      '  ID,'
+      '  NR_ANILHA,'
+      '  NOME_AVE,'
+      '  PROPRIETARIO,'
+      '  PAI,'
+      '  MAE,'
+      '  ANILHA_PAI,'
+      '  ANILHA_MAE,'
+      '  REGISTRO_CTF,'
+      '  DATA_NASCIMENTO,'
+      '  SEXO'
+      'from CADCRACHA '
+      'where'
+      '  ID = :ID')
     ModifySQL.Strings = (
-      'UPDATE CADCRACHA'
+      'update CADCRACHA'
+      'set'
+      '  NR_ANILHA = :NR_ANILHA,'
+      '  NOME_AVE = :NOME_AVE,'
+      '  PROPRIETARIO = :PROPRIETARIO,'
+      '  PAI = :PAI,'
+      '  MAE = :MAE,'
+      '  ANILHA_PAI = :ANILHA_PAI,'
+      '  ANILHA_MAE = :ANILHA_MAE,'
+      '  REGISTRO_CTF = :REGISTRO_CTF,'
+      '  DATA_NASCIMENTO = :DATA_NASCIMENTO,'
+      '  SEXO = :SEXO'
+      'where'
+      '  ID = :OLD_ID')
+    InsertSQL.Strings = (
+      'insert into CADCRACHA'
       
-        'SET NR_ANILHA = :NEW_NR_ANILHA, NOME_AVE = :NEW_NOME_AVE, PROPRI' +
-        'ETARIO = :NEW_PROPRIETARIO, '
-      '  PAI = :NEW_PAI, MAE = :NEW_MAE, ANILHA_PAI = :NEW_ANILHA_PAI, '
+        '  (NR_ANILHA, NOME_AVE, PROPRIETARIO, PAI, MAE, ANILHA_PAI, ANIL' +
+        'HA_MAE, '
+      '   REGISTRO_CTF, DATA_NASCIMENTO, SEXO)'
+      'values'
       
-        '  ANILHA_MAE = :NEW_ANILHA_MAE, REGISTRO_CTF = :NEW_REGISTRO_CTF' +
-        ', '
-      '  DATA_NASCIMENTO = :NEW_DATA_NASCIMENTO, SEXO = :NEW_SEXO'
-      'WHERE ID = :OLD_ID'
-      
-        'RETURNING NR_ANILHA, NOME_AVE, PROPRIETARIO, PAI, MAE, ANILHA_PA' +
-        'I, ANILHA_MAE, REGISTRO_CTF, DATA_NASCIMENTO, SEXO')
+        '  (:NR_ANILHA, :NOME_AVE, :PROPRIETARIO, :PAI, :MAE, :ANILHA_PAI' +
+        ', :ANILHA_MAE, '
+      '   :REGISTRO_CTF, :DATA_NASCIMENTO, :SEXO)')
     DeleteSQL.Strings = (
-      'DELETE FROM CADCRACHA'
-      'WHERE ID = :OLD_ID')
-    FetchRowSQL.Strings = (
-      
-        'SELECT ID, NR_ANILHA, NOME_AVE, PROPRIETARIO, PAI, MAE, ANILHA_P' +
-        'AI, '
-      '  ANILHA_MAE, REGISTRO_CTF, DATA_NASCIMENTO, SEXO'
-      'FROM CADCRACHA'
-      'WHERE ID = :OLD_ID')
-    Left = 560
-    Top = 168
+      'delete from CADCRACHA'
+      'where'
+      '  ID = :OLD_ID')
+    Left = 440
+    Top = 336
   end
 end

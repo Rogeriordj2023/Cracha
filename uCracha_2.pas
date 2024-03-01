@@ -11,7 +11,7 @@ uses
   Data.DB, FireDAC.Comp.DataSet, udmCracha;
 
 type
-  TForm2 = class(TForm)
+  TfrmCracha2 = class(TForm)
     DBText1: TDBText;
     DBText2: TDBText;
     DBText3: TDBText;
@@ -35,6 +35,7 @@ type
     Image1: TImage;
     Button6: TButton;
     Button4: TButton;
+    procedure Button6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,10 +43,16 @@ type
   end;
 
 var
-  Form2: TForm2;
+  frmCracha2: TfrmCracha2;
 
 implementation
 
 {$R *.dfm}
+
+procedure TfrmCracha2.Button6Click(Sender: TObject);
+begin
+  //udmCracha.DataModule1.qryCracha.Cancel;
+  Close;
+end;
 
 end.

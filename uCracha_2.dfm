@@ -1,7 +1,9 @@
-object Form2: TForm2
+object frmCracha2: TfrmCracha2
   Left = 0
   Top = 0
-  Caption = 'Cadastro de Crach'#225
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Cadastro / Altera'#231#227'o de Crach'#225
   ClientHeight = 344
   ClientWidth = 720
   Color = clBtnFace
@@ -10,6 +12,7 @@ object Form2: TForm2
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poDesktopCenter
   TextHeight = 15
   object DBText1: TDBText
     Left = 159
@@ -18,6 +21,7 @@ object Form2: TForm2
     Height = 17
     Color = clSilver
     DataField = 'NOME_AVE'
+    DataSource = DataModule1.DataSource2
     ParentColor = False
     Transparent = False
   end
@@ -28,6 +32,7 @@ object Form2: TForm2
     Height = 17
     Color = clSilver
     DataField = 'NR_ANILHA'
+    DataSource = DataModule1.DataSource2
     ParentColor = False
     Transparent = False
   end
@@ -38,6 +43,7 @@ object Form2: TForm2
     Height = 17
     Color = clSilver
     DataField = 'SEXO'
+    DataSource = DataModule1.DataSource2
     ParentColor = False
     Transparent = False
   end
@@ -48,6 +54,7 @@ object Form2: TForm2
     Height = 17
     Color = clSilver
     DataField = 'PAI'
+    DataSource = DataModule1.DataSource2
     ParentColor = False
     Transparent = False
   end
@@ -58,6 +65,7 @@ object Form2: TForm2
     Height = 17
     Color = clSilver
     DataField = 'ANILHA_PAI'
+    DataSource = DataModule1.DataSource2
     ParentColor = False
     Transparent = False
   end
@@ -85,6 +93,7 @@ object Form2: TForm2
     Height = 17
     Color = clSilver
     DataField = 'MAE'
+    DataSource = DataModule1.DataSource2
     ParentColor = False
     Transparent = False
   end
@@ -95,6 +104,7 @@ object Form2: TForm2
     Height = 17
     Color = clSilver
     DataField = 'ANILHA_MAE'
+    DataSource = DataModule1.DataSource2
     ParentColor = False
     Transparent = False
   end
@@ -105,6 +115,7 @@ object Form2: TForm2
     Height = 17
     Color = clSilver
     DataField = 'DATA_NASCIMENTO'
+    DataSource = DataModule1.DataSource2
     ParentColor = False
     Transparent = False
   end
@@ -115,6 +126,7 @@ object Form2: TForm2
     Height = 17
     Color = clSilver
     DataField = 'REGISTRO_CTF'
+    DataSource = DataModule1.DataSource2
     ParentColor = False
     Transparent = False
   end
@@ -125,6 +137,7 @@ object Form2: TForm2
     Height = 17
     Color = clSilver
     DataField = 'PROPRIETARIO'
+    DataSource = DataModule1.DataSource2
     ParentColor = False
     Transparent = False
   end
@@ -11541,6 +11554,7 @@ object Form2: TForm2
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
     TabOrder = 0
+    OnClick = Button6Click
   end
   object Button4: TButton
     Left = 636

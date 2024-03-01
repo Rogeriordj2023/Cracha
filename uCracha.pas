@@ -9,7 +9,7 @@ uses
   IBX.IBUpdateSQL, Data.SqlExpr, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls;
+  FireDAC.Comp.Client, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, uCracha_2;
 
 type
   TfrmCracha = class(TForm)
@@ -27,6 +27,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,12 +43,17 @@ implementation
 
 procedure TfrmCracha.Button1Click(Sender: TObject);
 begin
-  udmCracha.DataModule1.qryCracha.Open ;
+  //udmCracha.DataModule1.qryCracha.Open ;
 end;
 
 procedure TfrmCracha.Button4Click(Sender: TObject);
 begin
   //FDQuery1.Insert;
+end;
+
+procedure TfrmCracha.DBGrid1DblClick(Sender: TObject);
+begin
+  frmCracha2.ShowModal;
 end;
 
 procedure TfrmCracha.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -58,7 +64,7 @@ end;
 procedure TfrmCracha.FormShow(Sender: TObject);
 begin
   pcCadastro.ActivePageIndex := 0;
-  udmCracha.DataModule1.qryCracha.Open;
+  //udmCracha.DataModule1.qryCracha.Open;
 end;
 
 end.

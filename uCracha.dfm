@@ -35,6 +35,8 @@ object frmCracha: TfrmCracha
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 849
+    ExplicitHeight = 546
     object TabSheet1: TTabSheet
       Caption = 'Crach'#225
       object DBGrid1: TDBGrid
@@ -52,6 +54,7 @@ object frmCracha: TfrmCracha
         TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
+        OnDblClick = DBGrid1DblClick
         Columns = <
           item
             Expanded = False
@@ -61,11 +64,6 @@ object frmCracha: TfrmCracha
           item
             Expanded = False
             FieldName = 'NOME_AVE'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -12
-            Font.Name = 'Segoe UI'
-            Font.Style = []
             Title.Caption = 'Nome da Ave'
             Title.Color = clWhite
             Width = 189

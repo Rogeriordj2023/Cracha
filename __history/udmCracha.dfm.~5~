@@ -1,0 +1,88 @@
+object DataModule1: TDataModule1
+  Height = 480
+  Width = 640
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'DriverID=FB'
+      'User_Name=sysdba'
+      'Database=C:\Cracha\BCO1.FDB'
+      'CharacterSet=UTF8'
+      'Password=master')
+    Connected = True
+    Left = 32
+    Top = 24
+  end
+  object dsCracha: TDataSource
+    DataSet = ClientDataSet1
+    Left = 400
+    Top = 32
+  end
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 328
+    Top = 96
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 240
+    Top = 32
+  end
+  object SQLQuery1: TSQLQuery
+    DataSource = dsCracha
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'SELECT * FROM CADCRACHA')
+    SQLConnection = SQLConnection1
+    Left = 328
+    Top = 32
+  end
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'IBConnection'
+    DriverName = 'Interbase'
+    Params.Strings = (
+      'DriverUnit=Data.DBXInterBase'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver280.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=24.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXInterbaseMetaDataCommandFactory,DbxInt' +
+        'erBaseDriver280.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXInterbaseMetaDataCommand' +
+        'Factory,Borland.Data.DbxInterBaseDriver,Version=24.0.0.0,Culture' +
+        '=neutral,PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverINTERBASE'
+      'LibraryName=dbxint.dll'
+      'LibraryNameOsx=libsqlib.dylib'
+      'VendorLib=GDS32.DLL'
+      'VendorLibWin64=ibclient64.dll'
+      'VendorLibOsx=libgds.dylib'
+      'Role=RoleName'
+      'MaxBlobSize=-1'
+      'TrimChar=False'
+      'DisplayDriverName=InterBase Server'
+      'SEP='
+      'DriverName=Interbase'
+      'Database=Bco1.gdb'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=master'
+      'ServerCharSet='
+      'SQLDialect=3'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'IsolationLevel=ReadCommitted'
+      'Trim Char=False')
+    Left = 560
+    Top = 32
+  end
+end

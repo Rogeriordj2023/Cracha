@@ -114,7 +114,7 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="uCracha_2.pas">
-            <Form>Form2</Form>
+            <Form>frmCracha2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
