@@ -45,7 +45,7 @@ object frmCracha: TfrmCracha
         Width = 845
         Height = 483
         Align = alTop
-        DataSource = DataModule1.dsCracha
+        DataSource = dmCracha.DataSource1
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ReadOnly = True
         TabOrder = 0
@@ -54,7 +54,6 @@ object frmCracha: TfrmCracha
         TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
-        OnDblClick = DBGrid1DblClick
         Columns = <
           item
             Expanded = False
@@ -159,6 +158,7 @@ object frmCracha: TfrmCracha
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         TabOrder = 2
+        OnClick = Button2Click
       end
       object Button3: TButton
         Left = 165

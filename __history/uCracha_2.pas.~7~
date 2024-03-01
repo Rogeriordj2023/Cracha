@@ -1,0 +1,83 @@
+unit uCracha_2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.DBCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.Client,
+  Data.DB, FireDAC.Comp.DataSet, udmCracha, IBX.IBCustomDataSet,
+  IBX.IBUpdateSQL, IBX.IBSQL;
+
+type
+  TfrmCracha2 = class(TForm)
+    DBText1: TDBText;
+    DBText2: TDBText;
+    DBText3: TDBText;
+    DBText4: TDBText;
+    DBText5: TDBText;
+    Label3: TLabel;
+    DBText6: TDBText;
+    DBText7: TDBText;
+    DBText8: TDBText;
+    DBText9: TDBText;
+    DBText10: TDBText;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Image1: TImage;
+    Button6: TButton;
+    Button4: TButton;
+    IBSQL1: TIBSQL;
+    IBDataSet1: TIBDataSet;
+    IBDataSet1ID: TIntegerField;
+    IBDataSet1NR_ANILHA: TIBStringField;
+    IBDataSet1NOME_AVE: TIBStringField;
+    IBDataSet1PROPRIETARIO: TIBStringField;
+    IBDataSet1PAI: TIBStringField;
+    IBDataSet1MAE: TIBStringField;
+    IBDataSet1ANILHA_PAI: TIBStringField;
+    IBDataSet1ANILHA_MAE: TIBStringField;
+    IBDataSet1REGISTRO_CTF: TIBStringField;
+    IBDataSet1DATA_NASCIMENTO: TDateField;
+    IBDataSet1SEXO: TIBStringField;
+    DataSource2: TDataSource;
+    IBUpdateSQL1: TIBUpdateSQL;
+    procedure Button6Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  c_edit: Boolean;
+  c_insert: Boolean;
+  end;
+
+var
+  frmCracha2: TfrmCracha2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCracha2.Button6Click(Sender: TObject);
+begin
+  //udmCracha.DataModule1.qryCracha.Cancel;
+  Close;
+end;
+
+procedure TfrmCracha2.FormShow(Sender: TObject);
+begin
+  if c_edit then
+
+end;
+
+end.

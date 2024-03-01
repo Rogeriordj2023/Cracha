@@ -109,7 +109,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="udmCracha.pas">
-            <Form>DataModule1</Form>
+            <Form>dmCracha</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>

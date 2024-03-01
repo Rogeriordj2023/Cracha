@@ -8,21 +8,12 @@ uses
   Vcl.StdCtrls, Vcl.DBCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.Client,
-  Data.DB, FireDAC.Comp.DataSet, udmCracha;
+  Data.DB, FireDAC.Comp.DataSet, udmCracha, IBX.IBCustomDataSet,
+  IBX.IBUpdateSQL, IBX.IBSQL, Vcl.Mask;
 
 type
   TfrmCracha2 = class(TForm)
-    DBText1: TDBText;
-    DBText2: TDBText;
-    DBText3: TDBText;
-    DBText4: TDBText;
-    DBText5: TDBText;
     Label3: TLabel;
-    DBText6: TDBText;
-    DBText7: TDBText;
-    DBText8: TDBText;
-    DBText9: TDBText;
-    DBText10: TDBText;
     Label1: TLabel;
     Label2: TLabel;
     Label4: TLabel;
@@ -35,11 +26,25 @@ type
     Image1: TImage;
     Button6: TButton;
     Button4: TButton;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit5: TDBEdit;
+    DBEdit6: TDBEdit;
+    DBEdit7: TDBEdit;
+    DBEdit8: TDBEdit;
+    DBEdit9: TDBEdit;
+    DBEdit10: TDBEdit;
     procedure Button6Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+  c_edit: Boolean;
+  c_insert: Boolean;
   end;
 
 var
@@ -49,10 +54,21 @@ implementation
 
 {$R *.dfm}
 
+procedure TfrmCracha2.Button4Click(Sender: TObject);
+begin
+  dmCracha.FDQuery1.ApplyUpdates(0);
+end;
+
 procedure TfrmCracha2.Button6Click(Sender: TObject);
 begin
-  //udmCracha.DataModule1.qryCracha.Cancel;
+  dmCracha.FDQuery1.CancelUpdates;
   Close;
+end;
+
+procedure TfrmCracha2.FormShow(Sender: TObject);
+begin
+  if c_edit then
+    dmCracha.FDQuery1.Edit;
 end;
 
 end.

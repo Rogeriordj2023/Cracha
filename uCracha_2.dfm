@@ -13,65 +13,11 @@ object frmCracha2: TfrmCracha2
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesktopCenter
+  OnShow = FormShow
   TextHeight = 15
-  object DBText1: TDBText
-    Left = 159
-    Top = 7
-    Width = 241
-    Height = 17
-    Color = clSilver
-    DataField = 'NOME_AVE'
-    DataSource = DataModule1.DataSource2
-    ParentColor = False
-    Transparent = False
-  end
-  object DBText2: TDBText
-    Left = 159
-    Top = 37
-    Width = 241
-    Height = 17
-    Color = clSilver
-    DataField = 'NR_ANILHA'
-    DataSource = DataModule1.DataSource2
-    ParentColor = False
-    Transparent = False
-  end
-  object DBText3: TDBText
-    Left = 159
-    Top = 67
-    Width = 241
-    Height = 17
-    Color = clSilver
-    DataField = 'SEXO'
-    DataSource = DataModule1.DataSource2
-    ParentColor = False
-    Transparent = False
-  end
-  object DBText4: TDBText
-    Left = 159
-    Top = 97
-    Width = 241
-    Height = 17
-    Color = clSilver
-    DataField = 'PAI'
-    DataSource = DataModule1.DataSource2
-    ParentColor = False
-    Transparent = False
-  end
-  object DBText5: TDBText
-    Left = 159
-    Top = 127
-    Width = 241
-    Height = 17
-    Color = clSilver
-    DataField = 'ANILHA_PAI'
-    DataSource = DataModule1.DataSource2
-    ParentColor = False
-    Transparent = False
-  end
   object Label3: TLabel
     Left = 1
-    Top = 67
+    Top = 69
     Width = 155
     Height = 16
     AutoSize = False
@@ -86,64 +32,9 @@ object frmCracha2: TfrmCracha2
     ParentFont = False
     Transparent = False
   end
-  object DBText6: TDBText
-    Left = 159
-    Top = 158
-    Width = 241
-    Height = 17
-    Color = clSilver
-    DataField = 'MAE'
-    DataSource = DataModule1.DataSource2
-    ParentColor = False
-    Transparent = False
-  end
-  object DBText7: TDBText
-    Left = 159
-    Top = 188
-    Width = 241
-    Height = 17
-    Color = clSilver
-    DataField = 'ANILHA_MAE'
-    DataSource = DataModule1.DataSource2
-    ParentColor = False
-    Transparent = False
-  end
-  object DBText8: TDBText
-    Left = 159
-    Top = 218
-    Width = 241
-    Height = 17
-    Color = clSilver
-    DataField = 'DATA_NASCIMENTO'
-    DataSource = DataModule1.DataSource2
-    ParentColor = False
-    Transparent = False
-  end
-  object DBText9: TDBText
-    Left = 159
-    Top = 248
-    Width = 241
-    Height = 17
-    Color = clSilver
-    DataField = 'REGISTRO_CTF'
-    DataSource = DataModule1.DataSource2
-    ParentColor = False
-    Transparent = False
-  end
-  object DBText10: TDBText
-    Left = 159
-    Top = 279
-    Width = 241
-    Height = 17
-    Color = clSilver
-    DataField = 'PROPRIETARIO'
-    DataSource = DataModule1.DataSource2
-    ParentColor = False
-    Transparent = False
-  end
   object Label1: TLabel
     Left = 1
-    Top = 7
+    Top = 11
     Width = 155
     Height = 16
     AutoSize = False
@@ -160,7 +51,7 @@ object frmCracha2: TfrmCracha2
   end
   object Label2: TLabel
     Left = 1
-    Top = 37
+    Top = 40
     Width = 155
     Height = 16
     AutoSize = False
@@ -177,7 +68,7 @@ object frmCracha2: TfrmCracha2
   end
   object Label4: TLabel
     Left = 1
-    Top = 97
+    Top = 100
     Width = 155
     Height = 16
     AutoSize = False
@@ -194,7 +85,7 @@ object frmCracha2: TfrmCracha2
   end
   object Label5: TLabel
     Left = 1
-    Top = 127
+    Top = 129
     Width = 155
     Height = 16
     AutoSize = False
@@ -211,7 +102,7 @@ object frmCracha2: TfrmCracha2
   end
   object Label6: TLabel
     Left = 1
-    Top = 158
+    Top = 161
     Width = 155
     Height = 16
     AutoSize = False
@@ -228,7 +119,7 @@ object frmCracha2: TfrmCracha2
   end
   object Label7: TLabel
     Left = 1
-    Top = 188
+    Top = 191
     Width = 155
     Height = 16
     AutoSize = False
@@ -245,7 +136,7 @@ object frmCracha2: TfrmCracha2
   end
   object Label8: TLabel
     Left = 1
-    Top = 218
+    Top = 221
     Width = 155
     Height = 16
     AutoSize = False
@@ -262,7 +153,7 @@ object frmCracha2: TfrmCracha2
   end
   object Label9: TLabel
     Left = 1
-    Top = 248
+    Top = 251
     Width = 155
     Height = 16
     AutoSize = False
@@ -279,7 +170,7 @@ object frmCracha2: TfrmCracha2
   end
   object Label10: TLabel
     Left = 1
-    Top = 279
+    Top = 282
     Width = 155
     Height = 16
     AutoSize = False
@@ -11569,5 +11460,106 @@ object frmCracha2: TfrmCracha2
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
     TabOrder = 1
+    OnClick = Button4Click
+  end
+  object DBEdit1: TDBEdit
+    Left = 162
+    Top = 8
+    Width = 250
+    Height = 23
+    CharCase = ecUpperCase
+    DataField = 'NOME_AVE'
+    DataSource = dmCracha.DataSource1
+    TabOrder = 2
+  end
+  object DBEdit2: TDBEdit
+    Left = 162
+    Top = 37
+    Width = 250
+    Height = 23
+    CharCase = ecUpperCase
+    DataField = 'NR_ANILHA'
+    DataSource = dmCracha.DataSource1
+    TabOrder = 3
+  end
+  object DBEdit3: TDBEdit
+    Left = 162
+    Top = 66
+    Width = 250
+    Height = 23
+    CharCase = ecUpperCase
+    DataField = 'SEXO'
+    DataSource = dmCracha.DataSource1
+    TabOrder = 4
+  end
+  object DBEdit4: TDBEdit
+    Left = 162
+    Top = 97
+    Width = 250
+    Height = 23
+    CharCase = ecUpperCase
+    DataField = 'PAI'
+    DataSource = dmCracha.DataSource1
+    TabOrder = 5
+  end
+  object DBEdit5: TDBEdit
+    Left = 162
+    Top = 126
+    Width = 250
+    Height = 23
+    CharCase = ecUpperCase
+    DataField = 'ANILHA_PAI'
+    DataSource = dmCracha.DataSource1
+    TabOrder = 6
+  end
+  object DBEdit6: TDBEdit
+    Left = 162
+    Top = 158
+    Width = 250
+    Height = 23
+    CharCase = ecUpperCase
+    DataField = 'MAE'
+    DataSource = dmCracha.DataSource1
+    TabOrder = 7
+  end
+  object DBEdit7: TDBEdit
+    Left = 162
+    Top = 188
+    Width = 250
+    Height = 23
+    CharCase = ecUpperCase
+    DataField = 'ANILHA_MAE'
+    DataSource = dmCracha.DataSource1
+    TabOrder = 8
+  end
+  object DBEdit8: TDBEdit
+    Left = 162
+    Top = 218
+    Width = 250
+    Height = 23
+    CharCase = ecUpperCase
+    DataField = 'DATA_NASCIMENTO'
+    DataSource = dmCracha.DataSource1
+    TabOrder = 9
+  end
+  object DBEdit9: TDBEdit
+    Left = 162
+    Top = 248
+    Width = 250
+    Height = 23
+    CharCase = ecUpperCase
+    DataField = 'REGISTRO_CTF'
+    DataSource = dmCracha.DataSource1
+    TabOrder = 10
+  end
+  object DBEdit10: TDBEdit
+    Left = 162
+    Top = 279
+    Width = 250
+    Height = 23
+    CharCase = ecUpperCase
+    DataField = 'PROPRIETARIO'
+    DataSource = dmCracha.DataSource1
+    TabOrder = 11
   end
 end

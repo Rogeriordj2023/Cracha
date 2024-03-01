@@ -12,34 +12,22 @@ uses
   Data.FMTBcd, IBX.IBCustomDataSet, IBX.IBSQL, IBX.IBDatabase, IBX.IBUpdateSQL;
 
 type
-  TDataModule1 = class(TDataModule)
+  TdmCracha = class(TDataModule)
     FDConnection1: TFDConnection;
-    dsCracha: TDataSource;
-    ClientDataSet1: TClientDataSet;
-    DataSetProvider1: TDataSetProvider;
-    SQLQuery1: TSQLQuery;
-    SQLConnection1: TSQLConnection;
-    SQLConnection2: TSQLConnection;
+    FDQuery1: TFDQuery;
+    FDUpdateSQL1: TFDUpdateSQL;
+    FDQuery1ID: TIntegerField;
+    FDQuery1NR_ANILHA: TStringField;
+    FDQuery1NOME_AVE: TStringField;
+    FDQuery1PROPRIETARIO: TStringField;
+    FDQuery1PAI: TStringField;
+    FDQuery1MAE: TStringField;
+    FDQuery1ANILHA_PAI: TStringField;
+    FDQuery1ANILHA_MAE: TStringField;
+    FDQuery1REGISTRO_CTF: TStringField;
+    FDQuery1DATA_NASCIMENTO: TDateField;
+    FDQuery1SEXO: TStringField;
     DataSource1: TDataSource;
-    ClientDataSet2: TClientDataSet;
-    DataSetProvider2: TDataSetProvider;
-    SQLQuery2: TSQLQuery;
-    IBDatabase1: TIBDatabase;
-    IBSQL1: TIBSQL;
-    IBDataSet1: TIBDataSet;
-    DataSource2: TDataSource;
-    IBDataSet1ID: TIntegerField;
-    IBDataSet1NR_ANILHA: TIBStringField;
-    IBDataSet1NOME_AVE: TIBStringField;
-    IBDataSet1PROPRIETARIO: TIBStringField;
-    IBDataSet1PAI: TIBStringField;
-    IBDataSet1MAE: TIBStringField;
-    IBDataSet1ANILHA_PAI: TIBStringField;
-    IBDataSet1ANILHA_MAE: TIBStringField;
-    IBDataSet1REGISTRO_CTF: TIBStringField;
-    IBDataSet1DATA_NASCIMENTO: TDateField;
-    IBDataSet1SEXO: TIBStringField;
-    IBUpdateSQL1: TIBUpdateSQL;
   private
     { Private declarations }
   public
@@ -47,7 +35,7 @@ type
   end;
 
 var
-  DataModule1: TDataModule1;
+  dmCracha: TdmCracha;
 
 implementation
 

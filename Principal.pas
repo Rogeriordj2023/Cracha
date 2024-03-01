@@ -30,21 +30,20 @@ implementation
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  udmCracha.DataModule1.FDConnection1.Connected := False;
+  dmCracha.FDConnection1.Connected := False;
   action := caFree;
 end;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
-   with udmCracha.TDataModule1 do
-   begin
-     udmCracha.DataModule1.FDConnection1.Connected := True;
-   end;
+   dmCracha.FDConnection1.Connected := True;
+   dmCracha.FDQuery1.Active := True;
 end;
 
 procedure TForm1.mnCrachaClick(Sender: TObject);
 begin
    frmCracha.ShowModal;
+   dmCracha.FDQuery1.Open;
 end;
 
 end.

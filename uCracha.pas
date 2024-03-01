@@ -27,7 +27,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Button4Click(Sender: TObject);
-    procedure DBGrid1DblClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,14 +46,15 @@ begin
   //udmCracha.DataModule1.qryCracha.Open ;
 end;
 
+procedure TfrmCracha.Button2Click(Sender: TObject);
+begin
+  frmCracha2.ShowModal;
+  frmCracha2.c_edit := True;
+end;
+
 procedure TfrmCracha.Button4Click(Sender: TObject);
 begin
   //FDQuery1.Insert;
-end;
-
-procedure TfrmCracha.DBGrid1DblClick(Sender: TObject);
-begin
-  frmCracha2.ShowModal;
 end;
 
 procedure TfrmCracha.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -64,7 +65,6 @@ end;
 procedure TfrmCracha.FormShow(Sender: TObject);
 begin
   pcCadastro.ActivePageIndex := 0;
-  //udmCracha.DataModule1.qryCracha.Open;
 end;
 
 end.

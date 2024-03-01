@@ -1,0 +1,155 @@
+object dmCracha: TdmCracha
+  Height = 480
+  Width = 640
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'DriverID=FB'
+      'User_Name=sysdba'
+      'Database=C:\Cracha\BCO1.FDB'
+      'CharacterSet=UTF8'
+      'Password=master')
+    Connected = True
+    Left = 32
+    Top = 24
+  end
+  object IBDatabase1: TIBDatabase
+    Connected = True
+    DatabaseName = 'C:\Cracha2\BCO1.FDB'
+    Params.Strings = (
+      'user_name=sysdba'
+      'password=master')
+    LoginPrompt = False
+    ServerType = 'IBServer'
+    Left = 168
+    Top = 24
+  end
+  object IBSQL1: TIBSQL
+    Database = IBDatabase1
+    SQL.Strings = (
+      'SELECT * FROM CADCRACHA')
+    Left = 312
+    Top = 28
+  end
+  object IBDataSet1: TIBDataSet
+    Database = IBDatabase1
+    BufferChunks = 1000
+    CachedUpdates = False
+    SelectSQL.Strings = (
+      'SELECT * FROM CADCRACHA')
+    ParamCheck = True
+    UniDirectional = False
+    UpdateObject = IBUpdateSQL1
+    DataSource = DataSource2
+    Left = 400
+    Top = 28
+    object IBDataSet1ID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'CADCRACHA.ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object IBDataSet1NR_ANILHA: TIBStringField
+      FieldName = 'NR_ANILHA'
+      Origin = 'CADCRACHA.NR_ANILHA'
+      Size = 30
+    end
+    object IBDataSet1NOME_AVE: TIBStringField
+      FieldName = 'NOME_AVE'
+      Origin = 'CADCRACHA.NOME_AVE'
+      Size = 80
+    end
+    object IBDataSet1PROPRIETARIO: TIBStringField
+      FieldName = 'PROPRIETARIO'
+      Origin = 'CADCRACHA.PROPRIETARIO'
+      Size = 100
+    end
+    object IBDataSet1PAI: TIBStringField
+      FieldName = 'PAI'
+      Origin = 'CADCRACHA.PAI'
+      Size = 50
+    end
+    object IBDataSet1MAE: TIBStringField
+      FieldName = 'MAE'
+      Origin = 'CADCRACHA.MAE'
+      Size = 50
+    end
+    object IBDataSet1ANILHA_PAI: TIBStringField
+      FieldName = 'ANILHA_PAI'
+      Origin = 'CADCRACHA.ANILHA_PAI'
+      Size = 30
+    end
+    object IBDataSet1ANILHA_MAE: TIBStringField
+      FieldName = 'ANILHA_MAE'
+      Origin = 'CADCRACHA.ANILHA_MAE'
+      Size = 30
+    end
+    object IBDataSet1REGISTRO_CTF: TIBStringField
+      FieldName = 'REGISTRO_CTF'
+      Origin = 'CADCRACHA.REGISTRO_CTF'
+      Size = 15
+    end
+    object IBDataSet1DATA_NASCIMENTO: TDateField
+      FieldName = 'DATA_NASCIMENTO'
+      Origin = 'CADCRACHA.DATA_NASCIMENTO'
+    end
+    object IBDataSet1SEXO: TIBStringField
+      FieldName = 'SEXO'
+      Origin = 'CADCRACHA.SEXO'
+      Size = 10
+    end
+  end
+  object DataSource2: TDataSource
+    Left = 488
+    Top = 28
+  end
+  object IBUpdateSQL1: TIBUpdateSQL
+    RefreshSQL.Strings = (
+      'Select '
+      '  ID,'
+      '  NR_ANILHA,'
+      '  NOME_AVE,'
+      '  PROPRIETARIO,'
+      '  PAI,'
+      '  MAE,'
+      '  ANILHA_PAI,'
+      '  ANILHA_MAE,'
+      '  REGISTRO_CTF,'
+      '  DATA_NASCIMENTO,'
+      '  SEXO'
+      'from CADCRACHA '
+      'where'
+      '  ID = :ID')
+    ModifySQL.Strings = (
+      'update CADCRACHA'
+      'set'
+      '  NR_ANILHA = :NR_ANILHA,'
+      '  NOME_AVE = :NOME_AVE,'
+      '  PROPRIETARIO = :PROPRIETARIO,'
+      '  PAI = :PAI,'
+      '  MAE = :MAE,'
+      '  ANILHA_PAI = :ANILHA_PAI,'
+      '  ANILHA_MAE = :ANILHA_MAE,'
+      '  REGISTRO_CTF = :REGISTRO_CTF,'
+      '  DATA_NASCIMENTO = :DATA_NASCIMENTO,'
+      '  SEXO = :SEXO'
+      'where'
+      '  ID = :OLD_ID')
+    InsertSQL.Strings = (
+      'insert into CADCRACHA'
+      
+        '  (NR_ANILHA, NOME_AVE, PROPRIETARIO, PAI, MAE, ANILHA_PAI, ANIL' +
+        'HA_MAE, '
+      '   REGISTRO_CTF, DATA_NASCIMENTO, SEXO)'
+      'values'
+      
+        '  (:NR_ANILHA, :NOME_AVE, :PROPRIETARIO, :PAI, :MAE, :ANILHA_PAI' +
+        ', :ANILHA_MAE, '
+      '   :REGISTRO_CTF, :DATA_NASCIMENTO, :SEXO)')
+    DeleteSQL.Strings = (
+      'delete from CADCRACHA'
+      'where'
+      '  ID = :OLD_ID')
+    Left = 584
+    Top = 28
+  end
+end
