@@ -26,7 +26,6 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
@@ -43,18 +42,16 @@ implementation
 
 procedure TfrmCracha.Button1Click(Sender: TObject);
 begin
-  //udmCracha.DataModule1.qryCracha.Open ;
+  frmCracha2.ShowModal;
+  frmCracha2.c_insert := True;
+  frmCracha2.c_edit   := False;
 end;
 
 procedure TfrmCracha.Button2Click(Sender: TObject);
 begin
   frmCracha2.ShowModal;
-  frmCracha2.c_edit := True;
-end;
-
-procedure TfrmCracha.Button4Click(Sender: TObject);
-begin
-  //FDQuery1.Insert;
+  frmCracha2.c_edit   := True;
+  frmCracha2.c_insert := False;
 end;
 
 procedure TfrmCracha.FormClose(Sender: TObject; var Action: TCloseAction);

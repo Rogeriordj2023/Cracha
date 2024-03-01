@@ -69,6 +69,13 @@ procedure TfrmCracha2.FormShow(Sender: TObject);
 begin
   if c_edit then
     dmCracha.FDQuery1.Edit;
+
+  if c_insert then
+  begin
+    dmCracha.FDQuery1.Close;
+    dmCracha.FDQuery1.Append;
+    DBEdit1.SetFocus;
+  end;
 end;
 
 end.

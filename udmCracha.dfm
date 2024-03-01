@@ -1,6 +1,6 @@
 object dmCracha: TdmCracha
-  Height = 480
-  Width = 640
+  Height = 298
+  Width = 515
   object FDConnection1: TFDConnection
     Params.Strings = (
       'DriverID=FB'
@@ -9,7 +9,7 @@ object dmCracha: TdmCracha
       'CharacterSet=UTF8'
       'Password=master')
     Connected = True
-    Left = 24
+    Left = 32
     Top = 16
   end
   object FDQuery1: TFDQuery
@@ -24,7 +24,7 @@ object dmCracha: TdmCracha
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
+      Visible = False
     end
     object FDQuery1NR_ANILHA: TStringField
       FieldName = 'NR_ANILHA'
