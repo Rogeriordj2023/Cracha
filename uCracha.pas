@@ -25,8 +25,8 @@ type
     Button7: TButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
-    procedure FormShow(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,6 +45,7 @@ begin
   frmCracha2.ShowModal;
   frmCracha2.c_insert := True;
   frmCracha2.c_edit   := False;
+  dmCracha.FDQuery1.Refresh;
 end;
 
 procedure TfrmCracha.Button2Click(Sender: TObject);
@@ -52,16 +53,22 @@ begin
   frmCracha2.ShowModal;
   frmCracha2.c_edit   := True;
   frmCracha2.c_insert := False;
+
+end;
+
+procedure TfrmCracha.Button3Click(Sender: TObject);
+var
+  Result : Integer;
+begin
+  Result := MessageDlg('Atenção, Deseja realmente excluir a ave do plantel?',mtInformation,mbYesNo,-1);
+
+  if Result = mrYes then
+    dmCracha.FDQuery1.Delete;
 end;
 
 procedure TfrmCracha.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  Action := caFree;
-end;
-
-procedure TfrmCracha.FormShow(Sender: TObject);
-begin
-  pcCadastro.ActivePageIndex := 0;
+  Close;
 end;
 
 end.

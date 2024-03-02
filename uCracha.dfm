@@ -13,7 +13,6 @@ object frmCracha: TfrmCracha
   Font.Style = []
   Position = poDesktopCenter
   OnClose = FormClose
-  OnShow = FormShow
   TextHeight = 15
   object DBText21: TDBText
     Left = 193
@@ -61,10 +60,11 @@ object frmCracha: TfrmCracha
             Visible = False
           end
           item
+            Color = clAqua
             Expanded = False
             FieldName = 'NOME_AVE'
             Title.Caption = 'Nome da Ave'
-            Title.Color = clWhite
+            Title.Color = clAqua
             Width = 189
             Visible = True
           end
@@ -72,6 +72,7 @@ object frmCracha: TfrmCracha
             Expanded = False
             FieldName = 'NR_ANILHA'
             Title.Caption = 'Nr'#186' Anilha'
+            Title.Color = clAqua
             Width = 114
             Visible = True
           end
@@ -79,12 +80,14 @@ object frmCracha: TfrmCracha
             Expanded = False
             FieldName = 'SEXO'
             Title.Caption = 'Sexo'
+            Title.Color = clAqua
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'PAI'
             Title.Caption = 'Pai'
+            Title.Color = clAqua
             Width = 178
             Visible = True
           end
@@ -92,6 +95,7 @@ object frmCracha: TfrmCracha
             Expanded = False
             FieldName = 'ANILHA_PAI'
             Title.Caption = 'Anilha Pai'
+            Title.Color = clAqua
             Width = 143
             Visible = True
           end
@@ -99,6 +103,7 @@ object frmCracha: TfrmCracha
             Expanded = False
             FieldName = 'MAE'
             Title.Caption = 'M'#227'e'
+            Title.Color = clAqua
             Width = 164
             Visible = True
           end
@@ -106,6 +111,7 @@ object frmCracha: TfrmCracha
             Expanded = False
             FieldName = 'ANILHA_MAE'
             Title.Caption = 'Anilha M'#227'e'
+            Title.Color = clAqua
             Width = 129
             Visible = True
           end
@@ -113,6 +119,7 @@ object frmCracha: TfrmCracha
             Expanded = False
             FieldName = 'DATA_NASCIMENTO'
             Title.Caption = 'Data de Nascimento'
+            Title.Color = clAqua
             Width = 133
             Visible = True
           end
@@ -120,12 +127,14 @@ object frmCracha: TfrmCracha
             Expanded = False
             FieldName = 'REGISTRO_CTF'
             Title.Caption = 'Registro CTF'
+            Title.Color = clAqua
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'PROPRIETARIO'
             Title.Caption = 'Propriet'#225'rio'
+            Title.Color = clAqua
             Width = 228
             Visible = True
           end>
@@ -173,6 +182,7 @@ object frmCracha: TfrmCracha
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         TabOrder = 3
+        OnClick = Button3Click
       end
       object Button5: TButton
         Left = 246

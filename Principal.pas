@@ -43,7 +43,6 @@ end;
 procedure TForm1.mnCrachaClick(Sender: TObject);
 begin
    frmCracha.ShowModal;
-   dmCracha.FDQuery1.Open;
 end;
 
 end.

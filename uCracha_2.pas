@@ -56,7 +56,8 @@ implementation
 
 procedure TfrmCracha2.Button4Click(Sender: TObject);
 begin
-  dmCracha.FDQuery1.ApplyUpdates(0);
+  dmCracha.FDQuery1.ApplyUpdates(-1);
+  Close;
 end;
 
 procedure TfrmCracha2.Button6Click(Sender: TObject);
