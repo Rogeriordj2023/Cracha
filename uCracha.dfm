@@ -12,7 +12,9 @@ object frmCracha: TfrmCracha
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesktopCenter
+  OnActivate = FormActivate
   OnClose = FormClose
+  OnShow = FormShow
   TextHeight = 15
   object DBText21: TDBText
     Left = 193

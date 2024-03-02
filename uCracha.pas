@@ -27,6 +27,8 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,9 +67,19 @@ begin
     dmCracha.FDQuery1.Delete;
 end;
 
+procedure TfrmCracha.FormActivate(Sender: TObject);
+begin
+  dmCracha.FDQuery1.First;
+end;
+
 procedure TfrmCracha.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Close;
+end;
+
+procedure TfrmCracha.FormShow(Sender: TObject);
+begin
+  dmCracha.FDQuery1.Open;
 end;
 
 end.
