@@ -11467,7 +11467,6 @@ object frmCracha2: TfrmCracha2
     Top = 8
     Width = 250
     Height = 23
-    CharCase = ecUpperCase
     DataField = 'NOME_AVE'
     DataSource = dmCracha.DataSource1
     TabOrder = 2
@@ -11477,7 +11476,6 @@ object frmCracha2: TfrmCracha2
     Top = 37
     Width = 250
     Height = 23
-    CharCase = ecUpperCase
     DataField = 'NR_ANILHA'
     DataSource = dmCracha.DataSource1
     TabOrder = 3
@@ -11487,7 +11485,6 @@ object frmCracha2: TfrmCracha2
     Top = 66
     Width = 250
     Height = 23
-    CharCase = ecUpperCase
     DataField = 'SEXO'
     DataSource = dmCracha.DataSource1
     TabOrder = 4
@@ -11497,7 +11494,6 @@ object frmCracha2: TfrmCracha2
     Top = 97
     Width = 250
     Height = 23
-    CharCase = ecUpperCase
     DataField = 'PAI'
     DataSource = dmCracha.DataSource1
     TabOrder = 5
@@ -11507,7 +11503,6 @@ object frmCracha2: TfrmCracha2
     Top = 126
     Width = 250
     Height = 23
-    CharCase = ecUpperCase
     DataField = 'ANILHA_PAI'
     DataSource = dmCracha.DataSource1
     TabOrder = 6
@@ -11517,7 +11512,6 @@ object frmCracha2: TfrmCracha2
     Top = 158
     Width = 250
     Height = 23
-    CharCase = ecUpperCase
     DataField = 'MAE'
     DataSource = dmCracha.DataSource1
     TabOrder = 7
@@ -11527,7 +11521,6 @@ object frmCracha2: TfrmCracha2
     Top = 188
     Width = 250
     Height = 23
-    CharCase = ecUpperCase
     DataField = 'ANILHA_MAE'
     DataSource = dmCracha.DataSource1
     TabOrder = 8
@@ -11537,7 +11530,6 @@ object frmCracha2: TfrmCracha2
     Top = 218
     Width = 250
     Height = 23
-    CharCase = ecUpperCase
     DataField = 'DATA_NASCIMENTO'
     DataSource = dmCracha.DataSource1
     TabOrder = 9
@@ -11547,7 +11539,6 @@ object frmCracha2: TfrmCracha2
     Top = 248
     Width = 250
     Height = 23
-    CharCase = ecUpperCase
     DataField = 'REGISTRO_CTF'
     DataSource = dmCracha.DataSource1
     TabOrder = 10
@@ -11557,7 +11548,6 @@ object frmCracha2: TfrmCracha2
     Top = 279
     Width = 250
     Height = 23
-    CharCase = ecUpperCase
     DataField = 'PROPRIETARIO'
     DataSource = dmCracha.DataSource1
     TabOrder = 11

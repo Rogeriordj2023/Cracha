@@ -42,10 +42,9 @@ implementation
 
 procedure TfrmCracha.Button1Click(Sender: TObject);
 begin
-  frmCracha2.ShowModal;
   frmCracha2.c_insert := True;
   frmCracha2.c_edit   := False;
-  dmCracha.FDQuery1.Refresh;
+  frmCracha2.ShowModal;
 end;
 
 procedure TfrmCracha.Button2Click(Sender: TObject);
