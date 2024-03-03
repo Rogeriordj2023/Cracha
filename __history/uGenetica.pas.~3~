@@ -41,10 +41,6 @@ type
     DBEdit28: TDBEdit;
     DBEdit29: TDBEdit;
     DBEdit30: TDBEdit;
-    Button1: TButton;
-    Button2: TButton;
-    Button6: TButton;
-    Button4: TButton;
   private
     { Private declarations }
   public
