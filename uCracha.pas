@@ -43,6 +43,19 @@ type
     RLDBText7: TRLDBText;
     RLLabel8: TRLLabel;
     RLDBText8: TRLDBText;
+    RLPanel2: TRLPanel;
+    RLDBText9: TRLDBText;
+    RLDBText10: TRLDBText;
+    RLDBText11: TRLDBText;
+    RLDBText12: TRLDBText;
+    RLDBText13: TRLDBText;
+    RLDBText14: TRLDBText;
+    RLDBText15: TRLDBText;
+    RLDBText16: TRLDBText;
+    RLDBText17: TRLDBText;
+    RLDBText18: TRLDBText;
+    RLDBText19: TRLDBText;
+    RLDBText20: TRLDBText;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -89,7 +102,8 @@ end;
 
 procedure TfrmCracha.Button7Click(Sender: TObject);
 begin
-  impCracha.Print;
+  dmCracha.FDQuery2.Open;
+  impCracha.Preview();
 end;
 
 procedure TfrmCracha.FormActivate(Sender: TObject);

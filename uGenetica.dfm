@@ -23,6 +23,11 @@ object frmGenetica: TfrmGenetica
       Top = 255
       Width = 225
       Height = 23
+      DataField = 'NOME_AVE'
+      DataSource = dmCracha.dsCracha
+      KeyField = 'ID'
+      ListField = 'NOME_AVE'
+      ListSource = dmCracha.dsCracha
       TabOrder = 0
     end
     object DBEdit1: TDBEdit

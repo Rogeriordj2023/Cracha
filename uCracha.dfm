@@ -217,30 +217,31 @@ object frmCracha: TfrmCracha
         OnClick = Button7Click
       end
       object impCracha: TRLReport
-        Left = 733
-        Top = 48
-        Width = 794
-        Height = 1123
+        Left = 165
+        Top = 96
+        Width = 1123
+        Height = 794
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
+        PageSetup.Orientation = poLandscape
         Visible = False
         object RLPanel1: TRLPanel
-          Left = 41
+          Left = 48
           Top = 41
-          Width = 544
-          Height = 216
+          Width = 514
+          Height = 208
           Borders.Sides = sdCustom
           Borders.DrawLeft = True
           Borders.DrawTop = True
           Borders.DrawRight = True
           Borders.DrawBottom = True
           object RLImage1: TRLImage
-            Left = 20
-            Top = 19
-            Width = 145
+            Left = 5
+            Top = 7
+            Width = 136
             Height = 134
             Picture.Data = {
               0954506E67496D61676589504E470D0A1A0A0000000D49484452000001F90000
@@ -11484,9 +11485,9 @@ object frmCracha: TfrmCracha
             Scaled = True
           end
           object RLDBText1: TRLDBText
-            Left = 171
-            Top = 77
-            Width = 355
+            Left = 147
+            Top = 81
+            Width = 356
             Height = 23
             Alignment = taCenter
             AutoSize = False
@@ -11509,8 +11510,8 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLDBText2: TRLDBText
-            Left = 244
-            Top = 106
+            Left = 220
+            Top = 107
             Width = 280
             Height = 16
             AutoSize = False
@@ -11525,8 +11526,8 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLLabel2: TRLLabel
-            Left = 171
-            Top = 106
+            Left = 147
+            Top = 107
             Width = 67
             Height = 16
             AutoSize = False
@@ -11542,10 +11543,15 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLLabel3: TRLLabel
-            Left = 171
-            Top = 15
-            Width = 355
-            Height = 25
+            Left = 147
+            Top = 3
+            Width = 359
+            Height = 29
+            Borders.Sides = sdCustom
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             Caption = 'CRIADOURO MALUCOS POR BICUDO'
             Font.Charset = ANSI_CHARSET
             Font.Color = clBlack
@@ -11555,17 +11561,17 @@ object frmCracha: TfrmCracha
             ParentFont = False
           end
           object RLDBText3: TRLDBText
-            Left = 331
-            Top = 41
-            Width = 101
+            Left = 275
+            Top = 36
+            Width = 222
             Height = 16
             DataField = 'REGISTRO_CTF'
             DataSource = dmCracha.DataSource1
             Text = ''
           end
           object RLLabel4: TRLLabel
-            Left = 259
-            Top = 41
+            Left = 201
+            Top = 35
             Width = 68
             Height = 15
             Caption = 'CTF IBAMA'
@@ -11580,17 +11586,18 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLDBText4: TRLDBText
-            Left = 299
-            Top = 58
-            Width = 209
+            Left = 275
+            Top = 53
+            Width = 222
             Height = 16
+            AutoSize = False
             DataField = 'PROPRIETARIO'
             DataSource = dmCracha.DataSource1
             Text = ''
           end
           object RLLabel5: TRLLabel
-            Left = 195
-            Top = 59
+            Left = 171
+            Top = 54
             Width = 98
             Height = 15
             Caption = 'PROPRIET'#193'RIO'
@@ -11605,8 +11612,8 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLLabel1: TRLLabel
-            Left = 171
-            Top = 128
+            Left = 147
+            Top = 125
             Width = 89
             Height = 16
             AutoSize = False
@@ -11622,8 +11629,8 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLDBText5: TRLDBText
-            Left = 266
-            Top = 128
+            Left = 242
+            Top = 125
             Width = 166
             Height = 16
             AutoSize = False
@@ -11638,8 +11645,8 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLLabel6: TRLLabel
-            Left = 171
-            Top = 150
+            Left = 147
+            Top = 143
             Width = 41
             Height = 16
             AutoSize = False
@@ -11655,8 +11662,8 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLDBText6: TRLDBText
-            Left = 218
-            Top = 150
+            Left = 194
+            Top = 143
             Width = 214
             Height = 16
             AutoSize = False
@@ -11671,8 +11678,8 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLLabel7: TRLLabel
-            Left = 171
-            Top = 172
+            Left = 147
+            Top = 162
             Width = 41
             Height = 16
             AutoSize = False
@@ -11688,8 +11695,8 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLDBText7: TRLDBText
-            Left = 218
-            Top = 171
+            Left = 194
+            Top = 162
             Width = 307
             Height = 16
             AutoSize = False
@@ -11704,8 +11711,8 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLLabel8: TRLLabel
-            Left = 171
-            Top = 194
+            Left = 147
+            Top = 181
             Width = 41
             Height = 16
             AutoSize = False
@@ -11721,8 +11728,8 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLDBText8: TRLDBText
-            Left = 218
-            Top = 193
+            Left = 194
+            Top = 181
             Width = 307
             Height = 16
             AutoSize = False
@@ -11735,6 +11742,245 @@ object frmCracha: TfrmCracha
             Font.Style = []
             ParentFont = False
             Text = ''
+          end
+        end
+        object RLPanel2: TRLPanel
+          Left = 568
+          Top = 41
+          Width = 514
+          Height = 208
+          Borders.Sides = sdCustom
+          Borders.DrawLeft = True
+          Borders.DrawTop = True
+          Borders.DrawRight = True
+          Borders.DrawBottom = True
+          object RLDBText9: TRLDBText
+            Left = 16
+            Top = 4
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText10: TRLDBText
+            Left = 348
+            Top = 4
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = clAqua
+            DataField = 'GEN2'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText11: TRLDBText
+            Left = 104
+            Top = 65
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText12: TRLDBText
+            Left = 280
+            Top = 24
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText13: TRLDBText
+            Left = 117
+            Top = 25
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText14: TRLDBText
+            Left = 421
+            Top = 24
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText15: TRLDBText
+            Left = 319
+            Top = 44
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText16: TRLDBText
+            Left = 396
+            Top = 44
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText17: TRLDBText
+            Left = 337
+            Top = 88
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText18: TRLDBText
+            Left = 337
+            Top = 108
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText19: TRLDBText
+            Left = 337
+            Top = 128
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
+          end
+          object RLDBText20: TRLDBText
+            Left = 242
+            Top = 44
+            Width = 71
+            Height = 14
+            AutoSize = False
+            Color = cl3DLight
+            DataField = 'GEN1'
+            DataSource = dmCracha.dsGenetica
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Height = -9
+            Font.Name = 'Cambria'
+            Font.Style = []
+            ParentColor = False
+            ParentFont = False
+            Text = ''
+            Transparent = False
           end
         end
       end
