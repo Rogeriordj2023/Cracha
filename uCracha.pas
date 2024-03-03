@@ -9,7 +9,8 @@ uses
   IBX.IBUpdateSQL, Data.SqlExpr, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, uCracha_2;
+  FireDAC.Comp.Client, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, uCracha_2,
+  RLReport;
 
 type
   TfrmCracha = class(TForm)
@@ -23,12 +24,19 @@ type
     Button3: TButton;
     Button5: TButton;
     Button7: TButton;
+    impCracha: TRLReport;
+    RLImage1: TRLImage;
+    RLDBText1: TRLDBText;
+    RLLabel1: TRLLabel;
+    RLDBText2: TRLDBText;
+    RLLabel2: TRLLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,6 +73,11 @@ begin
 
   if Result = mrYes then
     dmCracha.FDQuery1.Delete;
+end;
+
+procedure TfrmCracha.Button7Click(Sender: TObject);
+begin
+  impCracha.Print;
 end;
 
 procedure TfrmCracha.FormActivate(Sender: TObject);
