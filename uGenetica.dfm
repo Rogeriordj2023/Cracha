@@ -41,14 +41,14 @@ object frmGenetica: TfrmGenetica
     end
     object DBEdit3: TDBEdit
       Left = 294
-      Top = 71
+      Top = 74
       Width = 121
       Height = 23
       TabOrder = 3
     end
     object DBEdit4: TDBEdit
       Left = 294
-      Top = 184
+      Top = 189
       Width = 121
       Height = 23
       TabOrder = 4
@@ -139,14 +139,14 @@ object frmGenetica: TfrmGenetica
     end
     object DBEdit17: TDBEdit
       Left = 294
-      Top = 326
+      Top = 329
       Width = 121
       Height = 23
       TabOrder = 17
     end
     object DBEdit18: TDBEdit
       Left = 294
-      Top = 439
+      Top = 443
       Width = 121
       Height = 23
       TabOrder = 18
