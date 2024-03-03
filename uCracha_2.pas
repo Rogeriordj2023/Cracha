@@ -74,9 +74,6 @@ end;
 
 procedure TfrmCracha2.FormShow(Sender: TObject);
 begin
-//  if dmCracha.FDQuery1.Active = False then
-//    dmCracha.FDQuery1.Open;
-
   if c_edit then
     dmCracha.FDQuery1.Edit;
 

@@ -298,6 +298,7 @@ object dmCracha: TdmCracha
     Top = 163
   end
   object FDQuery3: TFDQuery
+    Active = True
     CachedUpdates = True
     Connection = FDConnection1
     SQL.Strings = (
