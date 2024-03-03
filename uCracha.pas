@@ -75,7 +75,6 @@ begin
   frmCracha2.ShowModal;
   frmCracha2.c_edit   := True;
   frmCracha2.c_insert := False;
-
 end;
 
 procedure TfrmCracha.Button3Click(Sender: TObject);

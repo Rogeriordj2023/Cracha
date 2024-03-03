@@ -62,6 +62,7 @@ begin
   if dmCracha.FDQuery1.State = dsInsert then
     dmCracha.FDQuery1.Post;
 
+  dmCracha.FDQuery1.RefreshRecord(True);
   Close;
 end;
 
