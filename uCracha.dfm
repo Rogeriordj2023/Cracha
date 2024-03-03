@@ -199,7 +199,7 @@ object frmCracha: TfrmCracha
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         TabOrder = 4
-        OnClick = Button1Click
+        OnClick = Button5Click
       end
       object Button7: TButton
         Left = 327
@@ -217,8 +217,8 @@ object frmCracha: TfrmCracha
         OnClick = Button7Click
       end
       object impCracha: TRLReport
-        Left = -235
-        Top = 30
+        Left = -257
+        Top = -18
         Width = 1123
         Height = 794
         Font.Charset = DEFAULT_CHARSET
@@ -11486,7 +11486,7 @@ object frmCracha: TfrmCracha
           end
           object RLDBText1: TRLDBText
             Left = 147
-            Top = 74
+            Top = 79
             Width = 356
             Height = 29
             Alignment = taCenter
@@ -11511,7 +11511,7 @@ object frmCracha: TfrmCracha
           end
           object RLDBText2: TRLDBText
             Left = 220
-            Top = 107
+            Top = 111
             Width = 280
             Height = 16
             AutoSize = False
@@ -11527,7 +11527,7 @@ object frmCracha: TfrmCracha
           end
           object RLLabel2: TRLLabel
             Left = 147
-            Top = 107
+            Top = 111
             Width = 67
             Height = 16
             AutoSize = False
@@ -11544,9 +11544,10 @@ object frmCracha: TfrmCracha
           end
           object RLLabel3: TRLLabel
             Left = 147
-            Top = 3
+            Top = 7
             Width = 356
             Height = 29
+            AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
             Borders.DrawTop = True
@@ -11565,7 +11566,7 @@ object frmCracha: TfrmCracha
           end
           object RLDBText3: TRLDBText
             Left = 275
-            Top = 36
+            Top = 40
             Width = 222
             Height = 16
             DataField = 'REGISTRO_CTF'
@@ -11574,7 +11575,7 @@ object frmCracha: TfrmCracha
           end
           object RLLabel4: TRLLabel
             Left = 201
-            Top = 35
+            Top = 39
             Width = 68
             Height = 15
             Caption = 'CTF IBAMA'
@@ -11590,7 +11591,7 @@ object frmCracha: TfrmCracha
           end
           object RLDBText4: TRLDBText
             Left = 275
-            Top = 53
+            Top = 57
             Width = 222
             Height = 16
             AutoSize = False
@@ -11600,7 +11601,7 @@ object frmCracha: TfrmCracha
           end
           object RLLabel5: TRLLabel
             Left = 171
-            Top = 54
+            Top = 58
             Width = 98
             Height = 15
             Caption = 'PROPRIET'#193'RIO'
@@ -11616,7 +11617,7 @@ object frmCracha: TfrmCracha
           end
           object RLLabel1: TRLLabel
             Left = 147
-            Top = 125
+            Top = 129
             Width = 89
             Height = 16
             AutoSize = False
@@ -11633,7 +11634,7 @@ object frmCracha: TfrmCracha
           end
           object RLDBText5: TRLDBText
             Left = 242
-            Top = 125
+            Top = 129
             Width = 166
             Height = 16
             AutoSize = False
@@ -11649,7 +11650,7 @@ object frmCracha: TfrmCracha
           end
           object RLLabel6: TRLLabel
             Left = 147
-            Top = 143
+            Top = 147
             Width = 41
             Height = 16
             AutoSize = False
@@ -11666,7 +11667,7 @@ object frmCracha: TfrmCracha
           end
           object RLDBText6: TRLDBText
             Left = 194
-            Top = 143
+            Top = 147
             Width = 214
             Height = 16
             AutoSize = False
@@ -11682,7 +11683,7 @@ object frmCracha: TfrmCracha
           end
           object RLLabel7: TRLLabel
             Left = 147
-            Top = 162
+            Top = 166
             Width = 41
             Height = 16
             AutoSize = False
@@ -11699,7 +11700,7 @@ object frmCracha: TfrmCracha
           end
           object RLDBText7: TRLDBText
             Left = 194
-            Top = 162
+            Top = 166
             Width = 307
             Height = 16
             AutoSize = False
@@ -11715,7 +11716,7 @@ object frmCracha: TfrmCracha
           end
           object RLLabel8: TRLLabel
             Left = 147
-            Top = 181
+            Top = 185
             Width = 41
             Height = 16
             AutoSize = False
@@ -11732,7 +11733,7 @@ object frmCracha: TfrmCracha
           end
           object RLDBText8: TRLDBText
             Left = 194
-            Top = 181
+            Top = 185
             Width = 307
             Height = 16
             AutoSize = False
@@ -11758,17 +11759,17 @@ object frmCracha: TfrmCracha
           Borders.DrawRight = True
           Borders.DrawBottom = True
           object RLDBText9: TRLDBText
-            Left = 3
+            Left = 12
             Top = 95
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             Color = clAqua
             DataField = 'GEN1'
             DataSource = dmCracha.dsGenetica
@@ -11783,17 +11784,17 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLDBText10: TRLDBText
-            Left = 39
+            Left = 38
             Top = 136
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN3'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -11805,17 +11806,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText11: TRLDBText
-            Left = 39
+            Left = 38
             Top = 56
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN2'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -11827,17 +11828,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText12: TRLDBText
-            Left = 109
+            Left = 80
             Top = 154
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN7'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -11849,17 +11850,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText13: TRLDBText
-            Left = 109
+            Left = 80
             Top = 119
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN6'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -11871,17 +11872,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText14: TRLDBText
-            Left = 109
+            Left = 80
             Top = 76
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN5'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -11893,17 +11894,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText15: TRLDBText
-            Left = 109
+            Left = 80
             Top = 37
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN4'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -11915,17 +11916,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText16: TRLDBText
-            Left = 185
+            Left = 170
             Top = 168
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN15'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -11937,17 +11938,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText17: TRLDBText
-            Left = 185
+            Left = 170
             Top = 148
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN14'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -11959,17 +11960,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText18: TRLDBText
-            Left = 185
+            Left = 170
             Top = 128
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN13'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -11981,17 +11982,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText19: TRLDBText
-            Left = 185
+            Left = 170
             Top = 108
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN12'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12003,17 +12004,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText20: TRLDBText
-            Left = 185
+            Left = 170
             Top = 88
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN11'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12025,17 +12026,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText21: TRLDBText
-            Left = 185
+            Left = 170
             Top = 68
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN10'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12047,17 +12048,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText22: TRLDBText
-            Left = 185
+            Left = 170
             Top = 48
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN9'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12069,17 +12070,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText23: TRLDBText
-            Left = 185
+            Left = 170
             Top = 28
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN8'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12091,17 +12092,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText24: TRLDBText
-            Left = 261
+            Left = 270
             Top = 95
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             Color = clFuchsia
             DataField = 'GEN16'
             DataSource = dmCracha.dsGenetica
@@ -12116,17 +12117,17 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLDBText25: TRLDBText
-            Left = 293
+            Left = 291
             Top = 136
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN18'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12138,17 +12139,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText26: TRLDBText
-            Left = 293
+            Left = 291
             Top = 56
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN17'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12160,17 +12161,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText27: TRLDBText
-            Left = 363
+            Left = 329
             Top = 154
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN22'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12182,17 +12183,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText28: TRLDBText
-            Left = 363
+            Left = 329
             Top = 119
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN21'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12204,17 +12205,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText29: TRLDBText
-            Left = 363
+            Left = 329
             Top = 76
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN20'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12226,17 +12227,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText30: TRLDBText
-            Left = 363
+            Left = 329
             Top = 37
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN19'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12248,17 +12249,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText31: TRLDBText
-            Left = 439
+            Left = 419
             Top = 168
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN30'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12270,17 +12271,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText32: TRLDBText
-            Left = 439
+            Left = 419
             Top = 148
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN29'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12292,17 +12293,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText33: TRLDBText
-            Left = 439
+            Left = 419
             Top = 128
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN28'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12314,17 +12315,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText34: TRLDBText
-            Left = 439
+            Left = 419
             Top = 108
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN27'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12336,17 +12337,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText35: TRLDBText
-            Left = 439
+            Left = 419
             Top = 88
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN26'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12358,17 +12359,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText36: TRLDBText
-            Left = 439
+            Left = 419
             Top = 68
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN25'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12380,17 +12381,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText37: TRLDBText
-            Left = 439
+            Left = 419
             Top = 48
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN24'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12402,17 +12403,17 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText38: TRLDBText
-            Left = 439
+            Left = 419
             Top = 28
-            Width = 70
+            Width = 88
             Height = 14
             Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
-            Borders.DrawLeft = False
-            Borders.DrawTop = False
-            Borders.DrawRight = False
-            Borders.DrawBottom = False
+            Borders.DrawLeft = True
+            Borders.DrawTop = True
+            Borders.DrawRight = True
+            Borders.DrawBottom = True
             DataField = 'GEN23'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET

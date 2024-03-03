@@ -28,6 +28,7 @@ object Form1: TForm1
       end
       object mnGenetica: TMenuItem
         Caption = 'Gen'#233'tica'
+        OnClick = mnGeneticaClick
       end
     end
   end

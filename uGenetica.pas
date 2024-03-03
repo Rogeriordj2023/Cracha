@@ -45,6 +45,8 @@ type
     Button2: TButton;
     Button6: TButton;
     Button4: TButton;
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -57,5 +59,15 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmGenetica.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Close;
+end;
+
+procedure TfrmGenetica.FormShow(Sender: TObject);
+begin
+  dmCracha.FDQuery2.Open;
+end;
 
 end.

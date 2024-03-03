@@ -10,7 +10,7 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, uCracha_2,
-  RLReport;
+  RLReport, uGenetica;
 
 type
   TfrmCracha = class(TForm)
@@ -81,6 +81,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure Button7Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -116,6 +117,11 @@ begin
 
   if Result = mrYes then
     dmCracha.FDQuery1.Delete;
+end;
+
+procedure TfrmCracha.Button5Click(Sender: TObject);
+begin
+  frmGenetica.ShowModal;
 end;
 
 procedure TfrmCracha.Button7Click(Sender: TObject);

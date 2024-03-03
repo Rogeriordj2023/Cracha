@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uCracha, udmCracha;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uCracha, udmCracha, uGenetica;
 
 type
   TForm1 = class(TForm)
@@ -15,6 +15,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure mnCrachaClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure mnGeneticaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,6 +44,11 @@ end;
 procedure TForm1.mnCrachaClick(Sender: TObject);
 begin
    frmCracha.ShowModal;
+end;
+
+procedure TForm1.mnGeneticaClick(Sender: TObject);
+begin
+  frmGenetica.ShowModal;
 end;
 
 end.
