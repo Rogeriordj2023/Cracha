@@ -13,6 +13,9 @@ uses
 
 type
   TfrmCracha2 = class(TForm)
+    Button6: TButton;
+    Button4: TButton;
+    Panel1: TPanel;
     Label3: TLabel;
     Label1: TLabel;
     Label2: TLabel;
@@ -24,8 +27,6 @@ type
     Label9: TLabel;
     Label10: TLabel;
     Image1: TImage;
-    Button6: TButton;
-    Button4: TButton;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
     DBEdit3: TDBEdit;

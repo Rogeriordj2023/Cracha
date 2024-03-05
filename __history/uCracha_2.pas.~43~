@@ -61,13 +61,14 @@ begin
 
   if dmCracha.FDQuery1.State = dsInsert then
     dmCracha.FDQuery1.Post;
+
+  dmCracha.FDQuery1.RefreshRecord(True);
   Close;
 end;
 
 procedure TfrmCracha2.Button6Click(Sender: TObject);
 begin
- // if (dmCracha.FDQuery1.State = dsInsert) or (dmCracha.FDQuery1.State = dsEdit) then
-    dmCracha.FDQuery1.CancelUpdates;
+  dmCracha.FDQuery1.CancelUpdates;
   Close;
 end;
 
@@ -78,7 +79,6 @@ begin
 
   if c_insert then
   begin
-    dmCracha.FDQuery1.Close;
     dmCracha.FDQuery1.Append;
     DBEdit1.SetFocus;
   end;
