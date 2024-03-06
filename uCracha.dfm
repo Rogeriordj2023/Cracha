@@ -217,7 +217,7 @@ object frmCracha: TfrmCracha
         OnClick = Button7Click
       end
       object impCracha: TRLReport
-        Left = 12
+        Left = 316
         Top = 30
         Width = 1123
         Height = 794

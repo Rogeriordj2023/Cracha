@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uCracha, udmCracha, uGenetica;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uCracha, udmCracha, uGenetica,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls;
 
 type
   TForm1 = class(TForm)
@@ -12,6 +13,7 @@ type
     Cadastro1: TMenuItem;
     mnCracha: TMenuItem;
     mnGenetica: TMenuItem;
+    Image1: TImage;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure mnCrachaClick(Sender: TObject);
     procedure FormShow(Sender: TObject);

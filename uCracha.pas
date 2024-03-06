@@ -122,6 +122,7 @@ end;
 procedure TfrmCracha.Button5Click(Sender: TObject);
 begin
   frmGenetica.ShowModal;
+  dmCracha.FDQuery1.RefreshRecord(true);
 end;
 
 procedure TfrmCracha.Button7Click(Sender: TObject);

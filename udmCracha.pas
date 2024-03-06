@@ -68,6 +68,17 @@ type
     FDQuery3ID: TIntegerField;
     FDQuery3NR_ANILHA: TStringField;
     FDQuery3NOME_AVE: TStringField;
+    FDQuery3PROPRIETARIO: TStringField;
+    FDQuery3PAI: TStringField;
+    FDQuery3MAE: TStringField;
+    FDQuery3ANILHA_PAI: TStringField;
+    FDQuery3ANILHA_MAE: TStringField;
+    FDQuery3REGISTRO_CTF: TStringField;
+    FDQuery3DATA_NASCIMENTO: TDateField;
+    FDQuery3SEXO: TStringField;
+    FDTransaction1: TFDTransaction;
+    FDQuery4: TFDQuery;
+    FDQuery4ID_ANILHA_REF: TIntegerField;
   private
     { Private declarations }
   public

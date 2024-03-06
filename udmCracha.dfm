@@ -15,6 +15,7 @@ object dmCracha: TdmCracha
   object FDQuery1: TFDQuery
     CachedUpdates = True
     Connection = FDConnection1
+    Transaction = FDTransaction1
     UpdateObject = FDUpdateSQL1
     SQL.Strings = (
       'SELECT * FROM CADCRACHA')
@@ -88,7 +89,10 @@ object dmCracha: TdmCracha
   end
   object FDQuery2: TFDQuery
     CachedUpdates = True
+    MasterSource = dsCracha
+    MasterFields = 'ID'
     Connection = FDConnection1
+    Transaction = FDTransaction1
     UpdateObject = FDUpdateSQL2
     SQL.Strings = (
       'SELECT * FROM GENETICA')
@@ -97,7 +101,10 @@ object dmCracha: TdmCracha
     object FDQuery2ID: TIntegerField
       AutoGenerateValue = arAutoInc
       FieldName = 'ID'
+      KeyFields = 'ID_ANILHA_REF'
       Origin = 'ID'
+      ReadOnly = True
+      Visible = False
     end
     object FDQuery2GEN1: TStringField
       FieldName = 'GEN1'
@@ -298,7 +305,6 @@ object dmCracha: TdmCracha
     Top = 163
   end
   object FDQuery3: TFDQuery
-    Active = True
     CachedUpdates = True
     Connection = FDConnection1
     SQL.Strings = (
@@ -306,6 +312,7 @@ object dmCracha: TdmCracha
     Left = 128
     Top = 163
     object FDQuery3ID: TIntegerField
+      AutoGenerateValue = arAutoInc
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -320,6 +327,69 @@ object dmCracha: TdmCracha
       FieldName = 'NOME_AVE'
       Origin = 'NOME_AVE'
       Size = 80
+    end
+    object FDQuery3PROPRIETARIO: TStringField
+      FieldName = 'PROPRIETARIO'
+      Origin = 'PROPRIETARIO'
+      Size = 100
+    end
+    object FDQuery3PAI: TStringField
+      FieldName = 'PAI'
+      Origin = 'PAI'
+      Size = 50
+    end
+    object FDQuery3MAE: TStringField
+      FieldName = 'MAE'
+      Origin = 'MAE'
+      Size = 50
+    end
+    object FDQuery3ANILHA_PAI: TStringField
+      FieldName = 'ANILHA_PAI'
+      Origin = 'ANILHA_PAI'
+      Size = 30
+    end
+    object FDQuery3ANILHA_MAE: TStringField
+      FieldName = 'ANILHA_MAE'
+      Origin = 'ANILHA_MAE'
+      Size = 30
+    end
+    object FDQuery3REGISTRO_CTF: TStringField
+      FieldName = 'REGISTRO_CTF'
+      Origin = 'REGISTRO_CTF'
+      Size = 15
+    end
+    object FDQuery3DATA_NASCIMENTO: TDateField
+      FieldName = 'DATA_NASCIMENTO'
+      Origin = 'DATA_NASCIMENTO'
+    end
+    object FDQuery3SEXO: TStringField
+      FieldName = 'SEXO'
+      Origin = 'SEXO'
+      Size = 10
+    end
+  end
+  object FDTransaction1: TFDTransaction
+    Connection = FDConnection1
+    Left = 432
+    Top = 168
+  end
+  object FDQuery4: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM GENETICA '
+      'WHERE ID_ANILHA_REF=:ID_ANILHA_REF')
+    Left = 128
+    Top = 232
+    ParamData = <
+      item
+        Name = 'ID_ANILHA_REF'
+        DataType = ftString
+        ParamType = ptInput
+      end>
+    object FDQuery4ID_ANILHA_REF: TIntegerField
+      FieldName = 'ID_ANILHA_REF'
+      Origin = 'ID_ANILHA_REF'
+      Required = True
     end
   end
 end

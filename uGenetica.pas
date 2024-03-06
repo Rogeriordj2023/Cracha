@@ -45,12 +45,12 @@ type
     Button6: TButton;
     Button4: TButton;
     DBComboBox1: TDBComboBox;
-    procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -68,33 +68,39 @@ implementation
 
 procedure TfrmGenetica.Button1Click(Sender: TObject);
 begin
+  dmCracha.FDQuery4.ParamByName('ID_ANILHA_REF').asInteger := dmCracha.FDQuery3ID.AsInteger;
+  dmCracha.FDQuery4.Open;
+
+  if Not(dmCracha.FDQuery4.isEmpty) then
+  begin
+    ShowMessage('Já existe um cadastro de genética para essa anilha!');
+    Exit;
+  end;
+
+
   dmCracha.FDQuery2.Open;
   dmCracha.FDQuery2.insert;
+  dmCracha.FDQuery2.FieldByName('GEN1').AsString := dmCracha.FDQuery3.FieldByName('Pai').AsString;
+  dmCracha.FDQuery2.FieldByName('GEN16').AsString := dmCracha.FDQuery3.FieldByName('Mae').AsString;
 end;
 
 procedure TfrmGenetica.Button2Click(Sender: TObject);
 begin
-  if dmCracha.FDQuery2.State = dsBrowse then
-  begin
-    dmCracha.FDQuery2.Close;
-    dmCracha.FDQuery2.Open;
-  end;
-
   dmCracha.FDQuery2.Edit;
   dbComboBox1.SetFocus;
 end;
 
 procedure TfrmGenetica.Button4Click(Sender: TObject);
 begin
-  dmCracha.FDQuery2.FieldByName('ID_ANILHA_REF').AsString := dmCracha.FDQuery3ID.AsString;
-
-  if dmCracha.FDQuery2.State = dsEdit then
-    dmCracha.FDQuery2.ApplyUpdates(0);
-
   if dmCracha.FDQuery2.State = dsInsert then
+  begin
+    dmCracha.FDQuery2.FieldByName('ID_ANILHA_REF').AsString := dmCracha.FDQuery3ID.AsString;
     dmCracha.FDQuery2.Post;
+  end;
 
+  dmCracha.FDQuery2.ApplyUpdates(0);
   dmCracha.FDQuery2.RefreshRecord(True);
+  Close;
 end;
 
 procedure TfrmGenetica.Button6Click(Sender: TObject);
@@ -110,6 +116,7 @@ end;
 
 procedure TfrmGenetica.FormShow(Sender: TObject);
 begin
+  dmCracha.FDQuery2.Open;
   dmCracha.FDQuery3.Open;
 end;
 

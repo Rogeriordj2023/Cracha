@@ -21,9 +21,10 @@ object frmGenetica: TfrmGenetica
     Height = 521
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 685
     object DBEdit1: TDBEdit
       Left = 167
-      Top = 126
+      Top = 130
       Width = 121
       Height = 23
       DataField = 'GEN1'
@@ -44,7 +45,7 @@ object frmGenetica: TfrmGenetica
       Top = 74
       Width = 121
       Height = 23
-      DataField = 'GEN3'
+      DataField = 'GEN2'
       DataSource = dmCracha.dsGenetica
       TabOrder = 2
     end
