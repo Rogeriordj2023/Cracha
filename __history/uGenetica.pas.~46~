@@ -68,7 +68,14 @@ implementation
 
 procedure TfrmGenetica.Button1Click(Sender: TObject);
 begin
+  dmCracha.FDQuery4.ParamByName('ID_ANILHA_REF').asInteger := dmCracha.FDQuery3ID.AsInteger;
   dmCracha.FDQuery4.Open;
+
+  if Not(dmCracha.FDQuery4.isEmpty) then
+  begin
+    ShowMessage('Já existe um cadastro de genética para essa anilha!');
+    Exit;
+  end;
 
 
   dmCracha.FDQuery2.Open;

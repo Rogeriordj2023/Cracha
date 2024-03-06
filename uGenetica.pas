@@ -53,6 +53,7 @@ type
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
+    Procedure AlteraBotao;
   public
     { Public declarations }
     c_insert_g:Boolean;
@@ -65,6 +66,14 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmGenetica.AlteraBotao;
+begin
+  Button1.Enabled := dmCracha.FDQuery2.State=(dsBrowse);
+  Button2.Enabled := dmCracha.FDQuery2.State=(dsBrowse);
+  Button4.Enabled := dmCracha.FDQuery2.State<>(dsBrowse);
+  Button6.Enabled := dmCracha.FDQuery2.State<>(dsBrowse);
+end;
 
 procedure TfrmGenetica.Button1Click(Sender: TObject);
 begin
@@ -88,6 +97,7 @@ procedure TfrmGenetica.Button2Click(Sender: TObject);
 begin
   dmCracha.FDQuery2.Edit;
   dbComboBox1.SetFocus;
+  AlteraBotao;
 end;
 
 procedure TfrmGenetica.Button4Click(Sender: TObject);
@@ -106,6 +116,7 @@ end;
 procedure TfrmGenetica.Button6Click(Sender: TObject);
 begin
   dmCracha.FDQuery2.CancelUpdates;
+  AlteraBotao;
   Close;
 end;
 
@@ -118,6 +129,7 @@ procedure TfrmGenetica.FormShow(Sender: TObject);
 begin
   dmCracha.FDQuery2.Open;
   dmCracha.FDQuery3.Open;
+  AlteraBotao;
 end;
 
 end.

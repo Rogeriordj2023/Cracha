@@ -53,6 +53,7 @@ type
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
+    Procedure AlteraBotao;
   public
     { Public declarations }
     c_insert_g:Boolean;
@@ -66,9 +67,25 @@ implementation
 
 {$R *.dfm}
 
+procedure TfrmGenetica.AlteraBotao;
+begin
+  Button1.Enabled := dmCracha.FDQuery2.State=(dsBrowse);
+  Button2.Enabled := dmCracha.FDQuery2.State=(dsBrowse);
+  Button4.Enabled := dmCracha.FDQuery2.State<>(dsBrowse);
+  Button6.Enabled := dmCracha.FDQuery2.State<>(dsBrowse);
+end;
+
 procedure TfrmGenetica.Button1Click(Sender: TObject);
 begin
-  dmCracha.FDQuery4.open;
+  dmCracha.FDQuery4.ParamByName('ID_ANILHA_REF').asInteger := dmCracha.FDQuery3ID.AsInteger;
+  dmCracha.FDQuery4.Open;
+
+  if Not(dmCracha.FDQuery4.isEmpty) then
+  begin
+    ShowMessage('Já existe um cadastro de genética para essa anilha!');
+    Exit;
+  end;
+
 
   dmCracha.FDQuery2.Open;
   dmCracha.FDQuery2.insert;
@@ -80,6 +97,7 @@ procedure TfrmGenetica.Button2Click(Sender: TObject);
 begin
   dmCracha.FDQuery2.Edit;
   dbComboBox1.SetFocus;
+  AlteraBotao;
 end;
 
 procedure TfrmGenetica.Button4Click(Sender: TObject);
@@ -110,6 +128,7 @@ procedure TfrmGenetica.FormShow(Sender: TObject);
 begin
   dmCracha.FDQuery2.Open;
   dmCracha.FDQuery3.Open;
+  AlteraBotao;
 end;
 
 end.
