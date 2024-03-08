@@ -10,7 +10,7 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, uCracha_2,
-  RLReport;
+  RLReport, uGenetica;
 
 type
   TfrmCracha = class(TForm)
@@ -45,6 +45,35 @@ type
     RLDBText8: TRLDBText;
     RLPanel2: TRLPanel;
     RLDBText9: TRLDBText;
+    RLDBText10: TRLDBText;
+    RLDBText11: TRLDBText;
+    RLDBText12: TRLDBText;
+    RLDBText13: TRLDBText;
+    RLDBText14: TRLDBText;
+    RLDBText15: TRLDBText;
+    RLDBText16: TRLDBText;
+    RLDBText17: TRLDBText;
+    RLDBText18: TRLDBText;
+    RLDBText19: TRLDBText;
+    RLDBText20: TRLDBText;
+    RLDBText21: TRLDBText;
+    RLDBText22: TRLDBText;
+    RLDBText23: TRLDBText;
+    RLDBText24: TRLDBText;
+    RLDBText25: TRLDBText;
+    RLDBText26: TRLDBText;
+    RLDBText27: TRLDBText;
+    RLDBText28: TRLDBText;
+    RLDBText29: TRLDBText;
+    RLDBText30: TRLDBText;
+    RLDBText31: TRLDBText;
+    RLDBText32: TRLDBText;
+    RLDBText33: TRLDBText;
+    RLDBText34: TRLDBText;
+    RLDBText35: TRLDBText;
+    RLDBText36: TRLDBText;
+    RLDBText37: TRLDBText;
+    RLDBText38: TRLDBText;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -52,6 +81,8 @@ type
     procedure FormShow(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure Button7Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -86,18 +117,31 @@ begin
   Result := MessageDlg('Atenção, Deseja realmente excluir a ave do plantel?',mtInformation,mbYesNo,-1);
 
   if Result = mrYes then
-    dmCracha.FDQuery1.Delete;
+    dmCracha.qryCracha.Delete;
+end;
+
+procedure TfrmCracha.Button5Click(Sender: TObject);
+begin
+  frmGenetica.
+  frmGenetica.ShowModal;
+  dmCracha.qryCracha.RefreshRecord(true);
 end;
 
 procedure TfrmCracha.Button7Click(Sender: TObject);
 begin
-  dmCracha.FDQuery2.Open;
+  dmCracha.qryGenetica.ParamByName('ID').AsInteger := dmCracha.qryCracha.FieldByName('ID').AsInteger;
+  dmCracha.qryGenetica.Open;
   impCracha.Preview();
+end;
+
+procedure TfrmCracha.DBGrid1DblClick(Sender: TObject);
+begin
+  Button2Click(Sender);
 end;
 
 procedure TfrmCracha.FormActivate(Sender: TObject);
 begin
-  dmCracha.FDQuery1.First;
+  dmCracha.qryCracha.First;
 end;
 
 procedure TfrmCracha.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -107,7 +151,7 @@ end;
 
 procedure TfrmCracha.FormShow(Sender: TObject);
 begin
-  dmCracha.FDQuery1.Open;
+  dmCracha.qryCracha.Open;
 end;
 
 end.

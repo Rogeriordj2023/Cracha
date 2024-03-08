@@ -63,7 +63,7 @@ begin
   end;
 
   dmCracha.qryCracha.ApplyUpdates(0);
-  dmCracha.qryCracha.RefreshRecord(True);
+//  dmCracha.qryCracha.RefreshRecord(True);
   Close;
 
 {  if dmCracha.FDQuery1.State = dsEdit then
@@ -84,7 +84,6 @@ end;
 
 procedure TfrmCracha2.FormShow(Sender: TObject);
 begin
-  dmCracha.qryCracha.FieldByName('ID').AsInteger := dmCracha.qryCracha.FieldByName('ID').AsInteger;
   if c_edit then
     dmCracha.qryCracha.Edit;
 
@@ -93,6 +92,8 @@ begin
     dmCracha.qryCracha.Append;
     DBEdit1.SetFocus;
   end;
+
+//  dmCracha.qryCracha.FieldByName('ID').AsInteger := dmCracha.qryCracha.FieldByName('ID').AsInteger;
 end;
 
 end.

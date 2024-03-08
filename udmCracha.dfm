@@ -18,8 +18,7 @@ object dmCracha: TdmCracha
     Transaction = FDTransaction2
     UpdateObject = updCracha
     SQL.Strings = (
-      'SELECT CA.*, GE.* FROM CADCRACHA CA'
-      'left join genetica GE on GE.id_anilha_ref=CA.ID;')
+      'SELECT CA.*  FROM CADCRACHA CA')
     Left = 128
     Top = 16
     object qryCrachaID: TIntegerField

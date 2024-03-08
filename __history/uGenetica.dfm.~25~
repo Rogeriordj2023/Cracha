@@ -21,9 +21,10 @@ object frmGenetica: TfrmGenetica
     Height = 521
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 685
     object DBEdit1: TDBEdit
       Left = 167
-      Top = 126
+      Top = 130
       Width = 121
       Height = 23
       DataField = 'GEN1'
@@ -44,7 +45,7 @@ object frmGenetica: TfrmGenetica
       Top = 74
       Width = 121
       Height = 23
-      DataField = 'GEN3'
+      DataField = 'GEN2'
       DataSource = dmCracha.dsGenetica
       TabOrder = 2
     end
@@ -53,7 +54,7 @@ object frmGenetica: TfrmGenetica
       Top = 189
       Width = 121
       Height = 23
-      DataField = 'GEN4'
+      DataField = 'GEN3'
       DataSource = dmCracha.dsGenetica
       TabOrder = 3
     end
@@ -297,7 +298,7 @@ object frmGenetica: TfrmGenetica
       Width = 225
       Height = 23
       DataField = 'NOME_AVE'
-      DataSource = dmCracha.dsCracha
+      DataSource = dmCracha.dsConsultaCracha
       TabOrder = 30
     end
   end
@@ -359,5 +360,6 @@ object frmGenetica: TfrmGenetica
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
     TabOrder = 4
+    OnClick = Button4Click
   end
 end

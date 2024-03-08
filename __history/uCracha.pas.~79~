@@ -10,7 +10,7 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, uCracha_2,
-  RLReport;
+  RLReport, uGenetica;
 
 type
   TfrmCracha = class(TForm)
@@ -81,6 +81,8 @@ type
     procedure FormShow(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure Button7Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -115,18 +117,30 @@ begin
   Result := MessageDlg('Atenção, Deseja realmente excluir a ave do plantel?',mtInformation,mbYesNo,-1);
 
   if Result = mrYes then
-    dmCracha.FDQuery1.Delete;
+    dmCracha.qryCracha.Delete;
+end;
+
+procedure TfrmCracha.Button5Click(Sender: TObject);
+begin
+  frmGenetica.ShowModal;
+  dmCracha.qryCracha.RefreshRecord(true);
 end;
 
 procedure TfrmCracha.Button7Click(Sender: TObject);
 begin
-  dmCracha.FDQuery2.Open;
+  dmCracha.qryGenetica.ParamByName('ID').AsInteger := dmCracha.qryCracha.FieldByName('ID').AsInteger;
+  dmCracha.qryGenetica.Open;
   impCracha.Preview();
+end;
+
+procedure TfrmCracha.DBGrid1DblClick(Sender: TObject);
+begin
+  Button2Click(Sender);
 end;
 
 procedure TfrmCracha.FormActivate(Sender: TObject);
 begin
-  dmCracha.FDQuery1.First;
+  dmCracha.qryCracha.First;
 end;
 
 procedure TfrmCracha.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -136,7 +150,7 @@ end;
 
 procedure TfrmCracha.FormShow(Sender: TObject);
 begin
-  dmCracha.FDQuery1.Open;
+  dmCracha.qryCracha.Open;
 end;
 
 end.

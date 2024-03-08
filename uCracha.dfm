@@ -55,6 +55,7 @@ object frmCracha: TfrmCracha
         TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
+        OnDblClick = DBGrid1DblClick
         Columns = <
           item
             Expanded = False

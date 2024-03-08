@@ -58,6 +58,7 @@ type
     { Public declarations }
     c_insert_g:Boolean;
     c_edit_g:Boolean;
+    ID_Cracha:Integer;
   end;
 
 var
@@ -69,53 +70,56 @@ implementation
 
 procedure TfrmGenetica.AlteraBotao;
 begin
-  Button1.Enabled := dmCracha.FDQuery2.State=(dsBrowse);
-  Button2.Enabled := dmCracha.FDQuery2.State=(dsBrowse);
-  Button4.Enabled := dmCracha.FDQuery2.State<>(dsBrowse);
-  Button6.Enabled := dmCracha.FDQuery2.State<>(dsBrowse);
+  if dmCracha.qryConsultaCracha.State=(dsBrowse) then
+  begin
+    Button1.Enabled := True;
+    Button2.Enabled := True;
+    Button4.Enabled := False;
+    Button6.Enabled := False;
+  end else
+  begin
+    Button1.Enabled := False;
+    Button2.Enabled := False;
+    Button4.Enabled := True;
+    Button6.Enabled := True;
+  end;
 end;
 
 procedure TfrmGenetica.Button1Click(Sender: TObject);
 begin
-  dmCracha.FDQuery4.ParamByName('ID_ANILHA_REF').asInteger := dmCracha.FDQuery3ID.AsInteger;
-  dmCracha.FDQuery4.Open;
-
-  if Not(dmCracha.FDQuery4.isEmpty) then
-  begin
-    ShowMessage('Já existe um cadastro de genética para essa anilha!');
-    Exit;
-  end;
-
-
-  dmCracha.FDQuery2.Open;
-  dmCracha.FDQuery2.insert;
-  dmCracha.FDQuery2.FieldByName('GEN1').AsString := dmCracha.FDQuery3.FieldByName('Pai').AsString;
-  dmCracha.FDQuery2.FieldByName('GEN16').AsString := dmCracha.FDQuery3.FieldByName('Mae').AsString;
+  dmCracha.qryGenetica.Open;
+  dmCracha.qryGenetica.insert;
+  dmCracha.qryGenetica.FieldByName('GEN1').AsString := dmCracha.qryConsultaCracha.FieldByName('Pai').AsString;
+  dmCracha.qryGenetica.FieldByName('GEN16').AsString := dmCracha.qryConsultaCracha.FieldByName('Mae').AsString;
 end;
 
 procedure TfrmGenetica.Button2Click(Sender: TObject);
 begin
-  dmCracha.FDQuery2.Edit;
+  dmCracha.qryGenetica.Edit;
   dbComboBox1.SetFocus;
   AlteraBotao;
 end;
 
 procedure TfrmGenetica.Button4Click(Sender: TObject);
 begin
-  if dmCracha.FDQuery2.State = dsInsert then
+  if dmCracha.qryGenetica.State = dsInsert then
   begin
-    dmCracha.FDQuery2.FieldByName('ID_ANILHA_REF').AsString := dmCracha.FDQuery3ID.AsString;
-    dmCracha.FDQuery2.Post;
+    dmCracha.qryGenetica.FieldByName('ID_ANILHA_REF').AsString := dmCracha.qryConsultaCrachaID.AsString;
+    dmCracha.qryGenetica.Post;
   end;
 
-  dmCracha.FDQuery2.ApplyUpdates(0);
-  dmCracha.FDQuery2.RefreshRecord(True);
+  dmCracha.qryGenetica.ApplyUpdates(0);
+  dmCracha.qryGenetica.RefreshRecord(True);
   Close;
 end;
 
 procedure TfrmGenetica.Button6Click(Sender: TObject);
 begin
-  dmCracha.FDQuery2.CancelUpdates;
+  if (dmCracha.qryGenetica.State = dsEdit)  or  (dmCracha.qryGenetica.State = dsInsert) then
+  begin
+    dmCracha.qryGenetica.CancelUpdates;
+    AlteraBotao;
+  end;
   Close;
 end;
 
@@ -125,9 +129,8 @@ begin
 end;
 
 procedure TfrmGenetica.FormShow(Sender: TObject);
-begin
-  dmCracha.FDQuery2.Open;
-  dmCracha.FDQuery3.Open;
+Begin
+  dmCracha.qryConsultaCracha.Open;
   AlteraBotao;
 end;
 

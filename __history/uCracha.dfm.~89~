@@ -55,6 +55,7 @@ object frmCracha: TfrmCracha
         TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
+        OnDblClick = DBGrid1DblClick
         Columns = <
           item
             Expanded = False
@@ -217,8 +218,8 @@ object frmCracha: TfrmCracha
         OnClick = Button7Click
       end
       object impCracha: TRLReport
-        Left = -257
-        Top = -18
+        Left = 460
+        Top = -13
         Width = 1123
         Height = 794
         Font.Charset = DEFAULT_CHARSET
@@ -11567,7 +11568,7 @@ object frmCracha: TfrmCracha
           object RLDBText3: TRLDBText
             Left = 275
             Top = 40
-            Width = 222
+            Width = 101
             Height = 16
             DataField = 'REGISTRO_CTF'
             DataSource = dmCracha.DataSource1

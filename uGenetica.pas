@@ -58,6 +58,7 @@ type
     { Public declarations }
     c_insert_g:Boolean;
     c_edit_g:Boolean;
+    ID_Cracha:Integer;
   end;
 
 var
@@ -69,23 +70,24 @@ implementation
 
 procedure TfrmGenetica.AlteraBotao;
 begin
-  Button1.Enabled := dmCracha.qryGenetica.State=(dsBrowse);
-  Button2.Enabled := dmCracha.qryGenetica.State=(dsBrowse);
-  Button4.Enabled := dmCracha.qryGenetica.State<>(dsBrowse);
-  Button6.Enabled := dmCracha.qryGenetica.State<>(dsBrowse);
+  if dmCracha.qryConsultaCracha.State=(dsBrowse) then
+  begin
+    Button1.Enabled := True;
+    Button2.Enabled := True;
+    Button4.Enabled := False;
+    Button6.Enabled := False;
+  end else
+  begin
+    Button1.Enabled := False;
+    Button2.Enabled := False;
+    Button4.Enabled := True;
+    Button6.Enabled := True;
+  end;
 end;
 
 procedure TfrmGenetica.Button1Click(Sender: TObject);
 begin
-  dmCracha.qryValida.ParamByName('ID_ANILHA_REF').asInteger := dmCracha.qryConsultaCrachaID.AsInteger;
-  dmCracha.qryValida.Open;
-
-  if Not(dmCracha.qryValida.isEmpty) then
-  begin
-    ShowMessage('Já existe um cadastro de genética para essa anilha!');
-    Exit;
-  end;
-
+  ///verificar o codigo esta errado.....verificar logica....
 
   dmCracha.qryGenetica.Open;
   dmCracha.qryGenetica.insert;
@@ -115,8 +117,11 @@ end;
 
 procedure TfrmGenetica.Button6Click(Sender: TObject);
 begin
-  dmCracha.qryGenetica.CancelUpdates;
-  AlteraBotao;
+  if (dmCracha.qryGenetica.State = dsEdit)  or  (dmCracha.qryGenetica.State = dsInsert) then
+  begin
+    dmCracha.qryGenetica.CancelUpdates;
+    AlteraBotao;
+  end;
   Close;
 end;
 
@@ -126,8 +131,7 @@ begin
 end;
 
 procedure TfrmGenetica.FormShow(Sender: TObject);
-begin
-  dmCracha.qryCracha.Open;
+Begin
   dmCracha.qryConsultaCracha.Open;
   AlteraBotao;
 end;

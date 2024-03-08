@@ -1,6 +1,6 @@
 object dmCracha: TdmCracha
-  Height = 298
-  Width = 515
+  Height = 392
+  Width = 699
   object FDConnection1: TFDConnection
     Params.Strings = (
       'DriverID=FB'
@@ -12,95 +12,89 @@ object dmCracha: TdmCracha
     Left = 32
     Top = 16
   end
-  object FDQuery1: TFDQuery
+  object qryCracha: TFDQuery
     CachedUpdates = True
     Connection = FDConnection1
     Transaction = FDTransaction2
-    UpdateObject = FDUpdateSQL1
+    UpdateObject = updCracha
     SQL.Strings = (
-      'SELECT * FROM CADCRACHA'
-      'WHERE ID=:ID')
+      'SELECT CA.*, GE.* FROM CADCRACHA CA'
+      'left join genetica GE on GE.id_anilha_ref=CA.ID;')
     Left = 128
     Top = 16
-    ParamData = <
-      item
-        Name = 'ID'
-        DataType = ftInteger
-        ParamType = ptInput
-      end>
-    object FDQuery1ID: TIntegerField
+    object qryCrachaID: TIntegerField
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Visible = False
     end
-    object FDQuery1NR_ANILHA: TStringField
+    object qryCrachaNR_ANILHA: TStringField
       FieldName = 'NR_ANILHA'
       Origin = 'NR_ANILHA'
       Size = 30
     end
-    object FDQuery1NOME_AVE: TStringField
+    object qryCrachaNOME_AVE: TStringField
       FieldName = 'NOME_AVE'
       Origin = 'NOME_AVE'
       Size = 80
     end
-    object FDQuery1PROPRIETARIO: TStringField
+    object qryCrachaPROPRIETARIO: TStringField
       FieldName = 'PROPRIETARIO'
       Origin = 'PROPRIETARIO'
       Size = 100
     end
-    object FDQuery1PAI: TStringField
+    object qryCrachaPAI: TStringField
       FieldName = 'PAI'
       Origin = 'PAI'
       Size = 50
     end
-    object FDQuery1MAE: TStringField
+    object qryCrachaMAE: TStringField
       FieldName = 'MAE'
       Origin = 'MAE'
       Size = 50
     end
-    object FDQuery1ANILHA_PAI: TStringField
+    object qryCrachaANILHA_PAI: TStringField
       FieldName = 'ANILHA_PAI'
       Origin = 'ANILHA_PAI'
       Size = 30
     end
-    object FDQuery1ANILHA_MAE: TStringField
+    object qryCrachaANILHA_MAE: TStringField
       FieldName = 'ANILHA_MAE'
       Origin = 'ANILHA_MAE'
       Size = 30
     end
-    object FDQuery1REGISTRO_CTF: TStringField
+    object qryCrachaREGISTRO_CTF: TStringField
       FieldName = 'REGISTRO_CTF'
       Origin = 'REGISTRO_CTF'
       Size = 15
     end
-    object FDQuery1DATA_NASCIMENTO: TDateField
+    object qryCrachaDATA_NASCIMENTO: TDateField
       FieldName = 'DATA_NASCIMENTO'
       Origin = 'DATA_NASCIMENTO'
     end
-    object FDQuery1SEXO: TStringField
+    object qryCrachaSEXO: TStringField
       FieldName = 'SEXO'
       Origin = 'SEXO'
       Size = 10
     end
   end
-  object FDUpdateSQL1: TFDUpdateSQL
+  object updCracha: TFDUpdateSQL
     Connection = FDConnection1
     Left = 216
     Top = 16
   end
   object DataSource1: TDataSource
-    DataSet = FDQuery1
+    DataSet = qryCracha
     Left = 304
     Top = 16
   end
-  object FDQuery2: TFDQuery
+  object qryGenetica: TFDQuery
     CachedUpdates = True
-    MasterSource = dsCracha
+    MasterSource = DataSource1
     MasterFields = 'ID'
     Connection = FDConnection1
     Transaction = FDTransaction1
-    UpdateObject = FDUpdateSQL2
+    UpdateObject = updGenetica
     SQL.Strings = (
       'SELECT * FROM GENETICA'
       'WHERE ID_ANILHA_REF=:ID')
@@ -112,7 +106,7 @@ object dmCracha: TdmCracha
         DataType = ftInteger
         ParamType = ptInput
       end>
-    object FDQuery2ID: TIntegerField
+    object qryGeneticaID: TIntegerField
       AutoGenerateValue = arAutoInc
       FieldName = 'ID'
       KeyFields = 'ID_ANILHA_REF'
@@ -120,133 +114,133 @@ object dmCracha: TdmCracha
       ReadOnly = True
       Visible = False
     end
-    object FDQuery2GEN1: TStringField
+    object qryGeneticaGEN1: TStringField
       FieldName = 'GEN1'
       Origin = 'GEN1'
     end
-    object FDQuery2GEN2: TStringField
+    object qryGeneticaGEN2: TStringField
       FieldName = 'GEN2'
       Origin = 'GEN2'
     end
-    object FDQuery2GEN3: TStringField
+    object qryGeneticaGEN3: TStringField
       FieldName = 'GEN3'
       Origin = 'GEN3'
     end
-    object FDQuery2GEN4: TStringField
+    object qryGeneticaGEN4: TStringField
       FieldName = 'GEN4'
       Origin = 'GEN4'
     end
-    object FDQuery2GEN5: TStringField
+    object qryGeneticaGEN5: TStringField
       FieldName = 'GEN5'
       Origin = 'GEN5'
     end
-    object FDQuery2GEN6: TStringField
+    object qryGeneticaGEN6: TStringField
       FieldName = 'GEN6'
       Origin = 'GEN6'
     end
-    object FDQuery2GEN7: TStringField
+    object qryGeneticaGEN7: TStringField
       FieldName = 'GEN7'
       Origin = 'GEN7'
     end
-    object FDQuery2GEN8: TStringField
+    object qryGeneticaGEN8: TStringField
       FieldName = 'GEN8'
       Origin = 'GEN8'
     end
-    object FDQuery2GEN9: TStringField
+    object qryGeneticaGEN9: TStringField
       FieldName = 'GEN9'
       Origin = 'GEN9'
     end
-    object FDQuery2GEN10: TStringField
+    object qryGeneticaGEN10: TStringField
       FieldName = 'GEN10'
       Origin = 'GEN10'
     end
-    object FDQuery2GEN11: TStringField
+    object qryGeneticaGEN11: TStringField
       FieldName = 'GEN11'
       Origin = 'GEN11'
     end
-    object FDQuery2GEN12: TStringField
+    object qryGeneticaGEN12: TStringField
       FieldName = 'GEN12'
       Origin = 'GEN12'
     end
-    object FDQuery2ID_ANILHA_REF: TIntegerField
+    object qryGeneticaID_ANILHA_REF: TIntegerField
       FieldName = 'ID_ANILHA_REF'
       Origin = 'ID_ANILHA_REF'
       Required = True
     end
-    object FDQuery2GEN13: TStringField
+    object qryGeneticaGEN13: TStringField
       FieldName = 'GEN13'
       Origin = 'GEN13'
     end
-    object FDQuery2GEN14: TStringField
+    object qryGeneticaGEN14: TStringField
       FieldName = 'GEN14'
       Origin = 'GEN14'
     end
-    object FDQuery2GEN15: TStringField
+    object qryGeneticaGEN15: TStringField
       FieldName = 'GEN15'
       Origin = 'GEN15'
     end
-    object FDQuery2GEN16: TStringField
+    object qryGeneticaGEN16: TStringField
       FieldName = 'GEN16'
       Origin = 'GEN16'
     end
-    object FDQuery2GEN17: TStringField
+    object qryGeneticaGEN17: TStringField
       FieldName = 'GEN17'
       Origin = 'GEN17'
     end
-    object FDQuery2GEN18: TStringField
+    object qryGeneticaGEN18: TStringField
       FieldName = 'GEN18'
       Origin = 'GEN18'
     end
-    object FDQuery2GEN19: TStringField
+    object qryGeneticaGEN19: TStringField
       FieldName = 'GEN19'
       Origin = 'GEN19'
     end
-    object FDQuery2GEN20: TStringField
+    object qryGeneticaGEN20: TStringField
       FieldName = 'GEN20'
       Origin = 'GEN20'
     end
-    object FDQuery2GEN21: TStringField
+    object qryGeneticaGEN21: TStringField
       FieldName = 'GEN21'
       Origin = 'GEN21'
     end
-    object FDQuery2GEN22: TStringField
+    object qryGeneticaGEN22: TStringField
       FieldName = 'GEN22'
       Origin = 'GEN22'
     end
-    object FDQuery2GEN23: TStringField
+    object qryGeneticaGEN23: TStringField
       FieldName = 'GEN23'
       Origin = 'GEN23'
     end
-    object FDQuery2GEN24: TStringField
+    object qryGeneticaGEN24: TStringField
       FieldName = 'GEN24'
       Origin = 'GEN24'
     end
-    object FDQuery2GEN25: TStringField
+    object qryGeneticaGEN25: TStringField
       FieldName = 'GEN25'
       Origin = 'GEN25'
     end
-    object FDQuery2GEN26: TStringField
+    object qryGeneticaGEN26: TStringField
       FieldName = 'GEN26'
       Origin = 'GEN26'
     end
-    object FDQuery2GEN27: TStringField
+    object qryGeneticaGEN27: TStringField
       FieldName = 'GEN27'
       Origin = 'GEN27'
     end
-    object FDQuery2GEN28: TStringField
+    object qryGeneticaGEN28: TStringField
       FieldName = 'GEN28'
       Origin = 'GEN28'
     end
-    object FDQuery2GEN29: TStringField
+    object qryGeneticaGEN29: TStringField
       FieldName = 'GEN29'
       Origin = 'GEN29'
     end
-    object FDQuery2GEN30: TStringField
+    object qryGeneticaGEN30: TStringField
       FieldName = 'GEN30'
       Origin = 'GEN30'
     end
   end
-  object FDUpdateSQL2: TFDUpdateSQL
+  object updGenetica: TFDUpdateSQL
     Connection = FDConnection1
     InsertSQL.Strings = (
       'INSERT INTO GENETICA'
@@ -309,74 +303,74 @@ object dmCracha: TdmCracha
     Top = 99
   end
   object dsGenetica: TDataSource
-    DataSet = FDQuery2
+    DataSet = qryGenetica
     Left = 304
     Top = 99
   end
-  object dsCracha: TDataSource
-    DataSet = FDQuery3
+  object dsConsultaCracha: TDataSource
+    DataSet = qryConsultaCracha
     Left = 304
     Top = 163
   end
-  object FDQuery3: TFDQuery
+  object qryConsultaCracha: TFDQuery
     CachedUpdates = True
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT * FROM CADCRACHA')
     Left = 128
     Top = 163
-    object FDQuery3ID: TIntegerField
+    object qryConsultaCrachaID: TIntegerField
       AutoGenerateValue = arAutoInc
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object FDQuery3NR_ANILHA: TStringField
+    object qryConsultaCrachaNR_ANILHA: TStringField
       FieldName = 'NR_ANILHA'
       Origin = 'NR_ANILHA'
       Size = 30
     end
-    object FDQuery3NOME_AVE: TStringField
+    object qryConsultaCrachaNOME_AVE: TStringField
       FieldName = 'NOME_AVE'
       Origin = 'NOME_AVE'
       Size = 80
     end
-    object FDQuery3PROPRIETARIO: TStringField
+    object qryConsultaCrachaPROPRIETARIO: TStringField
       FieldName = 'PROPRIETARIO'
       Origin = 'PROPRIETARIO'
       Size = 100
     end
-    object FDQuery3PAI: TStringField
+    object qryConsultaCrachaPAI: TStringField
       FieldName = 'PAI'
       Origin = 'PAI'
       Size = 50
     end
-    object FDQuery3MAE: TStringField
+    object qryConsultaCrachaMAE: TStringField
       FieldName = 'MAE'
       Origin = 'MAE'
       Size = 50
     end
-    object FDQuery3ANILHA_PAI: TStringField
+    object qryConsultaCrachaANILHA_PAI: TStringField
       FieldName = 'ANILHA_PAI'
       Origin = 'ANILHA_PAI'
       Size = 30
     end
-    object FDQuery3ANILHA_MAE: TStringField
+    object qryConsultaCrachaANILHA_MAE: TStringField
       FieldName = 'ANILHA_MAE'
       Origin = 'ANILHA_MAE'
       Size = 30
     end
-    object FDQuery3REGISTRO_CTF: TStringField
+    object qryConsultaCrachaREGISTRO_CTF: TStringField
       FieldName = 'REGISTRO_CTF'
       Origin = 'REGISTRO_CTF'
       Size = 15
     end
-    object FDQuery3DATA_NASCIMENTO: TDateField
+    object qryConsultaCrachaDATA_NASCIMENTO: TDateField
       FieldName = 'DATA_NASCIMENTO'
       Origin = 'DATA_NASCIMENTO'
     end
-    object FDQuery3SEXO: TStringField
+    object qryConsultaCrachaSEXO: TStringField
       FieldName = 'SEXO'
       Origin = 'SEXO'
       Size = 10
@@ -385,9 +379,9 @@ object dmCracha: TdmCracha
   object FDTransaction1: TFDTransaction
     Connection = FDConnection1
     Left = 432
-    Top = 168
+    Top = 104
   end
-  object FDQuery4: TFDQuery
+  object qryValida: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT * FROM GENETICA '
@@ -400,7 +394,7 @@ object dmCracha: TdmCracha
         DataType = ftString
         ParamType = ptInput
       end>
-    object FDQuery4ID_ANILHA_REF: TIntegerField
+    object qryValidaID_ANILHA_REF: TIntegerField
       FieldName = 'ID_ANILHA_REF'
       Origin = 'ID_ANILHA_REF'
       Required = True

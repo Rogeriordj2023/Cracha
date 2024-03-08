@@ -82,6 +82,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure Button7Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -130,6 +131,11 @@ begin
   dmCracha.qryGenetica.ParamByName('ID').AsInteger := dmCracha.qryCracha.FieldByName('ID').AsInteger;
   dmCracha.qryGenetica.Open;
   impCracha.Preview();
+end;
+
+procedure TfrmCracha.DBGrid1DblClick(Sender: TObject);
+begin
+  Button2Click(Sender);
 end;
 
 procedure TfrmCracha.FormActivate(Sender: TObject);
