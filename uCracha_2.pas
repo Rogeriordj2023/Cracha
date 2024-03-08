@@ -57,30 +57,40 @@ implementation
 
 procedure TfrmCracha2.Button4Click(Sender: TObject);
 begin
-  if dmCracha.FDQuery1.State = dsEdit then
+  if dmCracha.qryCracha.State = dsInsert then
+  begin
+    dmCracha.qryCracha.Post;
+  end;
+
+  dmCracha.qryCracha.ApplyUpdates(0);
+  dmCracha.qryCracha.RefreshRecord(True);
+  Close;
+
+{  if dmCracha.FDQuery1.State = dsEdit then
     dmCracha.FDQuery1.ApplyUpdates(0);
 
   if dmCracha.FDQuery1.State = dsInsert then
     dmCracha.FDQuery1.Post;
 
   dmCracha.FDQuery1.RefreshRecord(True);
-  Close;
+  Close;}
 end;
 
 procedure TfrmCracha2.Button6Click(Sender: TObject);
 begin
-  dmCracha.FDQuery1.CancelUpdates;
+  dmCracha.qryCracha.CancelUpdates;
   Close;
 end;
 
 procedure TfrmCracha2.FormShow(Sender: TObject);
 begin
+  dmCracha.qryCracha.FieldByName('ID').AsInteger := dmCracha.qryCracha.FieldByName('ID').AsInteger;
   if c_edit then
-    dmCracha.FDQuery1.Edit;
+    dmCracha.qryCracha.Edit;
 
   if c_insert then
   begin
-    dmCracha.FDQuery1.Append;
+    dmCracha.qryCracha.Append;
     DBEdit1.SetFocus;
   end;
 end;

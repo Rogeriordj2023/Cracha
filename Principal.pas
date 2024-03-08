@@ -40,12 +40,12 @@ end;
 procedure TForm1.FormShow(Sender: TObject);
 begin
    dmCracha.FDConnection1.Connected := True;
-   dmCracha.FDQuery1.Active := True;
 end;
 
 procedure TForm1.mnCrachaClick(Sender: TObject);
 begin
    frmCracha.ShowModal;
+   dmCracha.qryCracha.Active := True;
 end;
 
 procedure TForm1.mnGeneticaClick(Sender: TObject);

@@ -52,6 +52,7 @@ object frmCracha2: TfrmCracha2
     Height = 313
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 716
     object Label3: TLabel
       Left = 1
       Top = 69

@@ -298,7 +298,7 @@ object frmGenetica: TfrmGenetica
       Width = 225
       Height = 23
       DataField = 'NOME_AVE'
-      DataSource = dmCracha.dsCracha
+      DataSource = dmCracha.dsConsultaCracha
       TabOrder = 30
     end
   end
