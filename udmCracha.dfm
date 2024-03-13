@@ -89,8 +89,6 @@ object dmCracha: TdmCracha
   end
   object qryGenetica: TFDQuery
     CachedUpdates = True
-    MasterSource = DataSource1
-    MasterFields = 'ID'
     Connection = FDConnection1
     Transaction = FDTransaction1
     UpdateObject = updGenetica
@@ -102,7 +100,6 @@ object dmCracha: TdmCracha
     ParamData = <
       item
         Name = 'ID'
-        DataType = ftInteger
         ParamType = ptInput
       end>
     object qryGeneticaID: TIntegerField
@@ -313,11 +310,20 @@ object dmCracha: TdmCracha
   end
   object qryConsultaCracha: TFDQuery
     CachedUpdates = True
+    MasterSource = dsGenetica
+    MasterFields = 'ID_ANILHA_REF'
     Connection = FDConnection1
     SQL.Strings = (
-      'SELECT * FROM CADCRACHA')
+      'SELECT * FROM CADCRACHA'
+      'where id=:id')
     Left = 128
     Top = 163
+    ParamData = <
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        ParamType = ptInput
+      end>
     object qryConsultaCrachaID: TIntegerField
       AutoGenerateValue = arAutoInc
       FieldName = 'ID'

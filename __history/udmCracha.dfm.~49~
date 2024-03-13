@@ -1,6 +1,6 @@
 object dmCracha: TdmCracha
-  Height = 298
-  Width = 515
+  Height = 392
+  Width = 699
   object FDConnection1: TFDConnection
     Params.Strings = (
       'DriverID=FB'
@@ -18,8 +18,7 @@ object dmCracha: TdmCracha
     Transaction = FDTransaction2
     UpdateObject = updCracha
     SQL.Strings = (
-      'SELECT * FROM CADCRACHA'
-      '')
+      'SELECT CA.*  FROM CADCRACHA CA')
     Left = 128
     Top = 16
     object qryCrachaID: TIntegerField
@@ -90,7 +89,7 @@ object dmCracha: TdmCracha
   end
   object qryGenetica: TFDQuery
     CachedUpdates = True
-    MasterSource = dsConsultaCracha
+    MasterSource = DataSource1
     MasterFields = 'ID'
     Connection = FDConnection1
     Transaction = FDTransaction1
@@ -379,7 +378,7 @@ object dmCracha: TdmCracha
   object FDTransaction1: TFDTransaction
     Connection = FDConnection1
     Left = 432
-    Top = 168
+    Top = 104
   end
   object qryValida: TFDQuery
     Connection = FDConnection1

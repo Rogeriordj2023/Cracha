@@ -11276,6 +11276,10 @@ object Form1: TForm1
         Caption = 'Crach'#225
         OnClick = mnCrachaClick
       end
+      object mnGenetica: TMenuItem
+        Caption = 'Gen'#233'tica'
+        OnClick = mnGeneticaClick
+      end
     end
   end
 end

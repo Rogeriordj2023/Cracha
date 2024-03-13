@@ -44,7 +44,7 @@ type
     Button2: TButton;
     Button6: TButton;
     Button4: TButton;
-    DBComboBox1: TDBComboBox;
+    Label1: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -59,6 +59,7 @@ type
     c_insert_g:Boolean;
     c_edit_g:Boolean;
     ID_Cracha:Integer;
+    v_Nome:String;
   end;
 
 var
@@ -70,7 +71,7 @@ implementation
 
 procedure TfrmGenetica.AlteraBotao;
 begin
-  if dmCracha.qryConsultaCracha.State=(dsBrowse) then
+  if dmCracha.qryGenetica.State=(dsBrowse) then
   begin
     Button1.Enabled := True;
     Button2.Enabled := True;
@@ -87,6 +88,8 @@ end;
 
 procedure TfrmGenetica.Button1Click(Sender: TObject);
 begin
+  ///verificar o codigo esta errado.....verificar logica....
+
   dmCracha.qryGenetica.Open;
   dmCracha.qryGenetica.insert;
   dmCracha.qryGenetica.FieldByName('GEN1').AsString := dmCracha.qryConsultaCracha.FieldByName('Pai').AsString;
@@ -96,7 +99,6 @@ end;
 procedure TfrmGenetica.Button2Click(Sender: TObject);
 begin
   dmCracha.qryGenetica.Edit;
-  dbComboBox1.SetFocus;
   AlteraBotao;
 end;
 
@@ -130,7 +132,13 @@ end;
 
 procedure TfrmGenetica.FormShow(Sender: TObject);
 Begin
-  dmCracha.qryConsultaCracha.Open;
+  dmCracha.qryGenetica.ParamByName('ID').AsInteger := ID_Cracha;
+  dmCracha.qryGenetica.Open;
+
+
+
+  Label1.Caption := InttoStr(ID_Cracha) + ' - ' + v_Nome;
+
   AlteraBotao;
 end;
 

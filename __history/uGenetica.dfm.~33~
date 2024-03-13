@@ -297,8 +297,9 @@ object frmGenetica: TfrmGenetica
       Top = 256
       Width = 225
       Height = 23
+      Style = csDropDownList
       DataField = 'NOME_AVE'
-      DataSource = dmCracha.dsCracha
+      DataSource = dmCracha.dsConsultaCracha
       TabOrder = 30
     end
   end

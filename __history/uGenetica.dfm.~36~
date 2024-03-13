@@ -297,18 +297,18 @@ object frmGenetica: TfrmGenetica
       Top = 256
       Width = 225
       Height = 23
+      Style = csDropDownList
       DataField = 'NOME_AVE'
       DataSource = dmCracha.dsConsultaCracha
       TabOrder = 30
     end
-    object DBLookupComboBox1: TDBLookupComboBox
-      Left = 8
-      Top = 285
-      Width = 225
+    object DBComboBox2: TDBComboBox
+      Left = 16
+      Top = 216
+      Width = 145
       Height = 23
       DataField = 'NOME_AVE'
       DataSource = dmCracha.dsConsultaCracha
-      ListSource = dmCracha.dsConsultaCracha
       TabOrder = 31
     end
   end

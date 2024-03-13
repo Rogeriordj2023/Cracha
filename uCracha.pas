@@ -122,8 +122,10 @@ end;
 
 procedure TfrmCracha.Button5Click(Sender: TObject);
 begin
+  frmgenetica.ID_Cracha := dmCracha.qryCracha.FieldByName('ID').AsInteger;
+  frmgenetica.v_Nome    := dmCracha.qryCracha.FieldByName('NOME_AVE').AsString;
   frmGenetica.ShowModal;
-  dmCracha.qryCracha.RefreshRecord(true);
+//  dmCracha.qryCracha.RefreshRecord(true);
 end;
 
 procedure TfrmCracha.Button7Click(Sender: TObject);

@@ -218,8 +218,8 @@ object frmCracha: TfrmCracha
         OnClick = Button7Click
       end
       object impCracha: TRLReport
-        Left = 460
-        Top = -13
+        Left = 500
+        Top = 110
         Width = 1123
         Height = 794
         Font.Charset = DEFAULT_CHARSET

@@ -12,7 +12,6 @@ type
     MainMenu1: TMainMenu;
     Cadastro1: TMenuItem;
     mnCracha: TMenuItem;
-    mnGenetica: TMenuItem;
     Image1: TImage;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure mnCrachaClick(Sender: TObject);
@@ -50,7 +49,7 @@ end;
 
 procedure TForm1.mnGeneticaClick(Sender: TObject);
 begin
-  frmGenetica.ShowModal;
+  //frmGenetica.ShowModal;
 end;
 
 end.
