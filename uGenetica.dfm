@@ -39,270 +39,270 @@ object frmGenetica: TfrmGenetica
       ParentFont = False
     end
     object DBEdit1: TDBEdit
-      Left = 167
+      Left = 158
       Top = 130
-      Width = 121
+      Width = 125
       Height = 23
       DataField = 'GEN1'
       DataSource = dmCracha.dsGenetica
       TabOrder = 0
     end
     object DBEdit2: TDBEdit
-      Left = 167
+      Left = 158
       Top = 384
-      Width = 121
+      Width = 125
       Height = 23
       DataField = 'GEN16'
       DataSource = dmCracha.dsGenetica
       TabOrder = 1
     end
     object DBEdit3: TDBEdit
-      Left = 294
+      Left = 285
       Top = 74
-      Width = 121
+      Width = 131
       Height = 23
       DataField = 'GEN2'
       DataSource = dmCracha.dsGenetica
       TabOrder = 2
     end
     object DBEdit4: TDBEdit
-      Left = 294
+      Left = 285
       Top = 189
-      Width = 121
+      Width = 131
       Height = 23
       DataField = 'GEN3'
       DataSource = dmCracha.dsGenetica
       TabOrder = 3
     end
     object DBEdit5: TDBEdit
-      Left = 421
+      Left = 402
       Top = 45
-      Width = 121
+      Width = 133
       Height = 23
       DataField = 'GEN4'
       DataSource = dmCracha.dsGenetica
       TabOrder = 4
     end
     object DBEdit6: TDBEdit
-      Left = 421
+      Left = 402
       Top = 104
-      Width = 121
+      Width = 133
       Height = 23
       DataField = 'GEN5'
       DataSource = dmCracha.dsGenetica
       TabOrder = 5
     end
     object DBEdit7: TDBEdit
-      Left = 421
+      Left = 402
       Top = 160
-      Width = 121
+      Width = 133
       Height = 23
       DataField = 'GEN6'
       DataSource = dmCracha.dsGenetica
       TabOrder = 6
     end
     object DBEdit8: TDBEdit
-      Left = 421
+      Left = 402
       Top = 217
-      Width = 121
+      Width = 133
       Height = 23
       DataField = 'GEN7'
       DataSource = dmCracha.dsGenetica
       TabOrder = 7
     end
     object DBEdit9: TDBEdit
-      Left = 548
+      Left = 539
       Top = 30
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN8'
       DataSource = dmCracha.dsGenetica
       TabOrder = 8
     end
     object DBEdit10: TDBEdit
-      Left = 548
+      Left = 539
       Top = 59
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN9'
       DataSource = dmCracha.dsGenetica
       TabOrder = 9
     end
     object DBEdit11: TDBEdit
-      Left = 548
+      Left = 539
       Top = 88
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN10'
       DataSource = dmCracha.dsGenetica
       TabOrder = 10
     end
     object DBEdit12: TDBEdit
-      Left = 548
+      Left = 539
       Top = 117
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN11'
       DataSource = dmCracha.dsGenetica
       TabOrder = 11
     end
     object DBEdit13: TDBEdit
-      Left = 548
+      Left = 539
       Top = 145
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN12'
       DataSource = dmCracha.dsGenetica
       TabOrder = 12
     end
     object DBEdit14: TDBEdit
-      Left = 548
+      Left = 539
       Top = 174
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN13'
       DataSource = dmCracha.dsGenetica
       TabOrder = 13
     end
     object DBEdit15: TDBEdit
-      Left = 548
+      Left = 539
       Top = 203
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN14'
       DataSource = dmCracha.dsGenetica
       TabOrder = 14
     end
     object DBEdit16: TDBEdit
-      Left = 548
+      Left = 539
       Top = 232
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN15'
       DataSource = dmCracha.dsGenetica
       TabOrder = 15
     end
     object DBEdit17: TDBEdit
-      Left = 294
+      Left = 285
       Top = 329
-      Width = 121
+      Width = 131
       Height = 23
       DataField = 'GEN17'
       DataSource = dmCracha.dsGenetica
       TabOrder = 16
     end
     object DBEdit18: TDBEdit
-      Left = 294
+      Left = 285
       Top = 443
-      Width = 121
+      Width = 131
       Height = 23
       DataField = 'GEN18'
       DataSource = dmCracha.dsGenetica
       TabOrder = 17
     end
     object DBEdit19: TDBEdit
-      Left = 421
+      Left = 402
       Top = 300
-      Width = 121
+      Width = 133
       Height = 23
       DataField = 'GEN19'
       DataSource = dmCracha.dsGenetica
       TabOrder = 18
     end
     object DBEdit20: TDBEdit
-      Left = 421
+      Left = 402
       Top = 359
-      Width = 121
+      Width = 133
       Height = 23
       DataField = 'GEN20'
       DataSource = dmCracha.dsGenetica
       TabOrder = 19
     end
     object DBEdit21: TDBEdit
-      Left = 421
+      Left = 402
       Top = 415
-      Width = 121
+      Width = 133
       Height = 23
       DataField = 'GEN21'
       DataSource = dmCracha.dsGenetica
       TabOrder = 20
     end
     object DBEdit22: TDBEdit
-      Left = 421
+      Left = 402
       Top = 472
-      Width = 121
+      Width = 133
       Height = 23
       DataField = 'GEN22'
       DataSource = dmCracha.dsGenetica
       TabOrder = 21
     end
     object DBEdit23: TDBEdit
-      Left = 548
+      Left = 539
       Top = 285
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN23'
       DataSource = dmCracha.dsGenetica
       TabOrder = 22
     end
     object DBEdit24: TDBEdit
-      Left = 548
+      Left = 539
       Top = 314
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN24'
       DataSource = dmCracha.dsGenetica
       TabOrder = 23
     end
     object DBEdit25: TDBEdit
-      Left = 548
+      Left = 539
       Top = 343
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN25'
       DataSource = dmCracha.dsGenetica
       TabOrder = 24
     end
     object DBEdit26: TDBEdit
-      Left = 548
+      Left = 539
       Top = 372
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN26'
       DataSource = dmCracha.dsGenetica
       TabOrder = 25
     end
     object DBEdit27: TDBEdit
-      Left = 548
+      Left = 539
       Top = 400
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN27'
       DataSource = dmCracha.dsGenetica
       TabOrder = 26
     end
     object DBEdit28: TDBEdit
-      Left = 548
+      Left = 539
       Top = 429
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN28'
       DataSource = dmCracha.dsGenetica
       TabOrder = 27
     end
     object DBEdit29: TDBEdit
-      Left = 548
+      Left = 539
       Top = 458
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN29'
       DataSource = dmCracha.dsGenetica
       TabOrder = 28
     end
     object DBEdit30: TDBEdit
-      Left = 548
+      Left = 539
       Top = 487
-      Width = 121
+      Width = 135
       Height = 23
       DataField = 'GEN30'
       DataSource = dmCracha.dsGenetica
