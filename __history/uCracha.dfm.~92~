@@ -55,6 +55,7 @@ object frmCracha: TfrmCracha
         TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
+        OnDblClick = DBGrid1DblClick
         Columns = <
           item
             Expanded = False
@@ -217,8 +218,8 @@ object frmCracha: TfrmCracha
         OnClick = Button7Click
       end
       object impCracha: TRLReport
-        Left = 12
-        Top = 30
+        Left = -324
+        Top = 78
         Width = 1123
         Height = 794
         Font.Charset = DEFAULT_CHARSET
@@ -11567,7 +11568,7 @@ object frmCracha: TfrmCracha
           object RLDBText3: TRLDBText
             Left = 275
             Top = 40
-            Width = 222
+            Width = 101
             Height = 16
             DataField = 'REGISTRO_CTF'
             DataSource = dmCracha.DataSource1
@@ -11788,7 +11789,6 @@ object frmCracha: TfrmCracha
             Top = 136
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11810,7 +11810,6 @@ object frmCracha: TfrmCracha
             Top = 56
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11832,7 +11831,6 @@ object frmCracha: TfrmCracha
             Top = 154
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11854,7 +11852,6 @@ object frmCracha: TfrmCracha
             Top = 119
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11876,7 +11873,6 @@ object frmCracha: TfrmCracha
             Top = 76
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11898,7 +11894,6 @@ object frmCracha: TfrmCracha
             Top = 37
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11920,7 +11915,6 @@ object frmCracha: TfrmCracha
             Top = 168
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11942,7 +11936,6 @@ object frmCracha: TfrmCracha
             Top = 148
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11964,7 +11957,6 @@ object frmCracha: TfrmCracha
             Top = 128
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11986,7 +11978,6 @@ object frmCracha: TfrmCracha
             Top = 108
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12008,7 +11999,6 @@ object frmCracha: TfrmCracha
             Top = 88
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12030,7 +12020,6 @@ object frmCracha: TfrmCracha
             Top = 68
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12052,7 +12041,6 @@ object frmCracha: TfrmCracha
             Top = 48
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12074,7 +12062,6 @@ object frmCracha: TfrmCracha
             Top = 28
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12121,7 +12108,6 @@ object frmCracha: TfrmCracha
             Top = 136
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12143,7 +12129,6 @@ object frmCracha: TfrmCracha
             Top = 56
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12165,7 +12150,6 @@ object frmCracha: TfrmCracha
             Top = 154
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12187,7 +12171,6 @@ object frmCracha: TfrmCracha
             Top = 119
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12209,7 +12192,6 @@ object frmCracha: TfrmCracha
             Top = 76
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12231,7 +12213,6 @@ object frmCracha: TfrmCracha
             Top = 37
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12253,7 +12234,6 @@ object frmCracha: TfrmCracha
             Top = 168
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12275,7 +12255,6 @@ object frmCracha: TfrmCracha
             Top = 148
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12297,7 +12276,6 @@ object frmCracha: TfrmCracha
             Top = 128
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12319,7 +12297,6 @@ object frmCracha: TfrmCracha
             Top = 108
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12341,7 +12318,6 @@ object frmCracha: TfrmCracha
             Top = 88
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12363,7 +12339,6 @@ object frmCracha: TfrmCracha
             Top = 68
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12385,7 +12360,6 @@ object frmCracha: TfrmCracha
             Top = 48
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12407,7 +12381,6 @@ object frmCracha: TfrmCracha
             Top = 28
             Width = 88
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True

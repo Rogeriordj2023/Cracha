@@ -218,8 +218,8 @@ object frmCracha: TfrmCracha
         OnClick = Button7Click
       end
       object impCracha: TRLReport
-        Left = 500
-        Top = 110
+        Left = -324
+        Top = 78
         Width = 1123
         Height = 794
         Font.Charset = DEFAULT_CHARSET
@@ -11785,11 +11785,10 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLDBText10: TRLDBText
-            Left = 38
+            Left = 12
             Top = 136
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11807,11 +11806,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText11: TRLDBText
-            Left = 38
+            Left = 12
             Top = 56
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11829,11 +11827,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText12: TRLDBText
-            Left = 80
+            Left = 54
             Top = 154
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11851,11 +11848,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText13: TRLDBText
-            Left = 80
+            Left = 54
             Top = 119
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11873,11 +11869,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText14: TRLDBText
-            Left = 80
+            Left = 54
             Top = 76
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11895,11 +11890,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText15: TRLDBText
-            Left = 80
+            Left = 54
             Top = 37
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11917,11 +11911,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText16: TRLDBText
-            Left = 170
+            Left = 154
             Top = 168
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11939,11 +11932,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText17: TRLDBText
-            Left = 170
+            Left = 154
             Top = 148
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11961,11 +11953,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText18: TRLDBText
-            Left = 170
+            Left = 154
             Top = 128
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -11983,11 +11974,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText19: TRLDBText
-            Left = 170
+            Left = 154
             Top = 108
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12005,11 +11995,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText20: TRLDBText
-            Left = 170
+            Left = 154
             Top = 88
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12027,11 +12016,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText21: TRLDBText
-            Left = 170
+            Left = 154
             Top = 68
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12049,11 +12037,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText22: TRLDBText
-            Left = 170
+            Left = 154
             Top = 48
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12071,11 +12058,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText23: TRLDBText
-            Left = 170
+            Left = 154
             Top = 28
-            Width = 88
+            Width = 99
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12093,7 +12079,7 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText24: TRLDBText
-            Left = 270
+            Left = 266
             Top = 95
             Width = 88
             Height = 14
@@ -12104,7 +12090,7 @@ object frmCracha: TfrmCracha
             Borders.DrawTop = True
             Borders.DrawRight = True
             Borders.DrawBottom = True
-            Color = clFuchsia
+            Color = clYellow
             DataField = 'GEN16'
             DataSource = dmCracha.dsGenetica
             Font.Charset = ANSI_CHARSET
@@ -12118,11 +12104,10 @@ object frmCracha: TfrmCracha
             Transparent = False
           end
           object RLDBText25: TRLDBText
-            Left = 291
+            Left = 266
             Top = 136
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12140,11 +12125,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText26: TRLDBText
-            Left = 291
+            Left = 266
             Top = 56
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12162,11 +12146,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText27: TRLDBText
-            Left = 329
+            Left = 304
             Top = 154
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12184,11 +12167,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText28: TRLDBText
-            Left = 329
+            Left = 304
             Top = 119
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12206,11 +12188,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText29: TRLDBText
-            Left = 329
+            Left = 304
             Top = 76
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12228,11 +12209,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText30: TRLDBText
-            Left = 329
+            Left = 304
             Top = 37
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12250,11 +12230,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText31: TRLDBText
-            Left = 419
+            Left = 408
             Top = 168
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12272,11 +12251,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText32: TRLDBText
-            Left = 419
+            Left = 408
             Top = 148
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12294,11 +12272,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText33: TRLDBText
-            Left = 419
+            Left = 408
             Top = 128
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12316,11 +12293,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText34: TRLDBText
-            Left = 419
+            Left = 408
             Top = 108
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12338,11 +12314,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText35: TRLDBText
-            Left = 419
+            Left = 408
             Top = 88
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12360,11 +12335,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText36: TRLDBText
-            Left = 419
+            Left = 408
             Top = 68
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12382,11 +12356,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText37: TRLDBText
-            Left = 419
+            Left = 408
             Top = 48
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
@@ -12404,11 +12377,10 @@ object frmCracha: TfrmCracha
             Text = ''
           end
           object RLDBText38: TRLDBText
-            Left = 419
+            Left = 408
             Top = 28
-            Width = 88
+            Width = 103
             Height = 14
-            Alignment = taCenter
             AutoSize = False
             Borders.Sides = sdCustom
             Borders.DrawLeft = True
