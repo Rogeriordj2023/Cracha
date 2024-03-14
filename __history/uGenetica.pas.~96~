@@ -45,12 +45,14 @@ type
     Button6: TButton;
     Button4: TButton;
     Label1: TLabel;
+    Button3: TButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
     Procedure AlteraBotao;
@@ -73,16 +75,19 @@ procedure TfrmGenetica.AlteraBotao;
 begin
   if dmCracha.qryGenetica.State=(dsBrowse) then
   begin
-    Button1.Enabled := True;
     Button2.Enabled := True;
     Button4.Enabled := False;
     Button6.Enabled := False;
+    Button3.Enabled := True;
   end else
   begin
-    Button1.Enabled := False;
+    if dmCracha.qryGenetica.IsEmpty then
+      Button1.Enabled := False;
+
     Button2.Enabled := False;
     Button4.Enabled := True;
     Button6.Enabled := True;
+    Button3.Enabled := False;
   end;
 end;
 
@@ -98,8 +103,15 @@ end;
 
 procedure TfrmGenetica.Button2Click(Sender: TObject);
 begin
+//  dmCracha.qryGenetica.FieldByName('GEN1').AsString := dmCracha.qryConsultaCracha.FieldByName('Pai').AsString;
+//  dmCracha.qryGenetica.FieldByName('GEN16').AsString := dmCracha.qryConsultaCracha.FieldByName('Mae').AsString;
   dmCracha.qryGenetica.Edit;
   AlteraBotao;
+end;
+
+procedure TfrmGenetica.Button3Click(Sender: TObject);
+begin
+  Close;
 end;
 
 procedure TfrmGenetica.Button4Click(Sender: TObject);
@@ -112,7 +124,6 @@ begin
 
   dmCracha.qryGenetica.ApplyUpdates(0);
   dmCracha.qryGenetica.RefreshRecord(True);
-  Close;
 end;
 
 procedure TfrmGenetica.Button6Click(Sender: TObject);
@@ -122,11 +133,12 @@ begin
     dmCracha.qryGenetica.CancelUpdates;
     AlteraBotao;
   end;
-  Close;
 end;
 
 procedure TfrmGenetica.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
+  dmCracha.qryGenetica.Close;
+  dmCracha.qryConsultaCracha.Close;
   Close;
 end;
 

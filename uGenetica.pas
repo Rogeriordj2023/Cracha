@@ -75,14 +75,20 @@ procedure TfrmGenetica.AlteraBotao;
 begin
   if dmCracha.qryGenetica.State=(dsBrowse) then
   begin
-    Button1.Enabled := True;
+    if dmCracha.qryGenetica.IsEmpty then
+      Button1.Enabled := True
+    else
+      Button1.Enabled := False;
+
     Button2.Enabled := True;
     Button4.Enabled := False;
     Button6.Enabled := False;
     Button3.Enabled := True;
   end else
   begin
-    Button1.Enabled := False;
+    if Not(dmCracha.qryGenetica.IsEmpty) then
+      Button1.Enabled := False;
+
     Button2.Enabled := False;
     Button4.Enabled := True;
     Button6.Enabled := True;
