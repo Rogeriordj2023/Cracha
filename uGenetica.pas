@@ -129,6 +129,8 @@ begin
 
   dmCracha.qryGenetica.ApplyUpdates(0);
   dmCracha.qryGenetica.RefreshRecord(True);
+
+  AlteraBotao;
 end;
 
 procedure TfrmGenetica.Button6Click(Sender: TObject);
