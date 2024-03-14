@@ -1,6 +1,7 @@
 object frmGenetica: TfrmGenetica
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Gen'#233'tica'
   ClientHeight = 567
   ClientWidth = 689

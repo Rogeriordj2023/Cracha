@@ -108,9 +108,10 @@ end;
 
 procedure TfrmGenetica.Button2Click(Sender: TObject);
 begin
-//  dmCracha.qryGenetica.FieldByName('GEN1').AsString := dmCracha.qryConsultaCracha.FieldByName('Pai').AsString;
-//  dmCracha.qryGenetica.FieldByName('GEN16').AsString := dmCracha.qryConsultaCracha.FieldByName('Mae').AsString;
   dmCracha.qryGenetica.Edit;
+  dmCracha.qryGenetica.FieldByName('GEN1').AsString  := dmCracha.qryConsultaCracha.FieldByName('Pai').AsString;
+  dmCracha.qryGenetica.FieldByName('GEN16').AsString := dmCracha.qryConsultaCracha.FieldByName('Mae').AsString;
+
   AlteraBotao;
 end;
 
